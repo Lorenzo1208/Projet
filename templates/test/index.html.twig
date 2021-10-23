@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TEST!{% endblock %}
+
+{% block content %}
+
+<link href="{{asset('/assets/css/test.css')}}" rel="stylesheet">
+ 
+     <link rel="stylesheet" href="{{asset('/assets/css/test.css')}}">
+
+     
+{#}
+     <script src="https://codepen.io/akm2/pen/KzYMdN"></script>
+     <link href='https://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet' type='text/css'>#}
+<canvas id='canvas'></canvas>
+<span>Move the mouse to paint.<span>
+
+<!-- 
+     Move the mouse to paint.
+     Click to change color.
+     Double Click to clear the canvas.
+-->
+
+{% endblock %}

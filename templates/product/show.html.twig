@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{product.name}} Boutique {% endblock %}
+
+{% block content %}
+
+<div class="row">
+
+    <div class="col-md-5"></div>
+
+        <img src="/uploads/{{ product.illustration}}" alt="{{product.name}}"  width="400" height="400" class="img-fluid"float="left">
+
+     </div>
+
+    <div class="col-md-8"></div>
+
+        <h3>{{product.name}}</h3>
+        <p>{{product.subtitle}}</p>
+        {{ (product.price/100) | number_format(2, ',', '.') }} €
+        <hr>
+        <p>
+        {{product.description}}
+        </p>
+        <a href="" class="btn btn-primary">Ajouter au panier</a>
+
+    </div>
+
+{% endblock %}

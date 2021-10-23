@@ -1,0 +1,20 @@
+@import "compass/css3";
+ @import url(https://fonts.googleapis.com/css?family=Give+You+Glory);
+ body {
+	 margin: 0px;
+	 overflow: hidden;
+	 font-family: 'Give You Glory', cursive;
+	 font-size: 40px;
+}
+ body:hover span {
+	 display: none;
+}
+ span {
+	 position: fixed;
+	 top: 50%;
+	 left: 50%;
+	 color: #000;
+	 margin-top: -40px;
+	 margin-left: -227px;
+}
+ 

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Boutique - Antonin Fournet{% endblock %}
+
+{% block content %}
+
+    <h1>La Boutique</h1>
+
+    <div class="row">
+
+        {% for products in products %}
+
+            <div class="col-md-5">
+
+                <div class="products-item text-center">
+                   
+                    <img src="/uploads/{{products.illustration}}" alt="{{products.name}}" class="img-fluid">
+                    
+                    <h4>{{ products.name }}</h4>
+                   
+                    <span class="products-subtitle">{{products.subtitle}}</span>
+                   
+                   <span class="products-price">{{ (products.price/100) | number_format(2, ',', '.') }} €</span>
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
