@@ -6,17 +6,17 @@
 
 <div class="row">
 
-    <div class="col-md-5"></div>
-
+    <div class="col-md-8"></div>
+        <p class="flotte">
         <img src="/uploads/{{ product.illustration}}" alt="{{product.name}}"  width="400" height="400" class="img-fluid"float="left">
-
+        </p>
      </div>
 
-    <div class="col-md-8"></div>
+    <div class="col-md-5"></div>
 
         <h3>{{product.name}}</h3>
         <p>{{product.subtitle}}</p>
-        {{ (product.price/100) | number_format(2, ',', '.') }} €
+        <span class="product-page-price">{{ (product.price/100) | number_format(2, ',', '.') }} €</span>
         <hr>
         <p>
         {{product.description}}

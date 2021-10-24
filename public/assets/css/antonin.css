@@ -29,6 +29,7 @@ margin-top: 50px;
     font-size: 14px;
     display: block;
     margin-bottom: 10px;
+    
 }
 
 .products-item, .products-price {
@@ -37,6 +38,9 @@ margin-top: 50px;
 
 }
 
+.product-page-price{
+    font-size: 22px;
+}
 
 
 
