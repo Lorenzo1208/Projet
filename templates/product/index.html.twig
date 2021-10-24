@@ -14,7 +14,7 @@
 
                 <div class="products-item text-center">
                    
-                    <img src="/uploads/{{products.illustration}}" alt="{{products.name}}" class="img-fluid">
+                    <a href="{{ path('product', { 'slug' : products.slug }) }}"><img src="/uploads/{{products.illustration}}" alt="{{products.name}}" class="img-fluid">
                     
                     <h4>{{ products.name }}</h4>
                    
