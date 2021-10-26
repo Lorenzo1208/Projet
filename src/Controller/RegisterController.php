@@ -21,7 +21,9 @@ class RegisterController extends AbstractController
         $this->entityManager = $entityManager;
     }
 
-    #[Route('/inscription', name: 'register')]
+    /**
+     * @Route("/inscription", name= "register")
+     */
     public function index(Request $request, UserPasswordHasherInterface $encoder): Response
     {
 
@@ -31,21 +33,20 @@ class RegisterController extends AbstractController
 
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
 
             $user = $form->getData();
 
-            $password = $encoder->hashPassword($user,$user->getPassword());
-            
+            $password = $encoder->hashPassword($user, $user->getPassword());
+
             $user->setPassword($password);
 
             $this->entityManager->persist($user);
             $this->entityManager->flush();
-
         }
 
-        return $this->render('register/index.html.twig',[
-            'form'=> $form->createView()
+        return $this->render('register/index.html.twig', [
+            'form' => $form->createView()
         ]);
     }
-}   
+}

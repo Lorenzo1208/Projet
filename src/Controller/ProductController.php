@@ -15,36 +15,38 @@ class ProductController extends AbstractController
 
     public function __construct(EntityManagerInterface $entityManager)
     {
-        $this->entityManager = $entityManager;  
+        $this->entityManager = $entityManager;
     }
 
-    #[Route('/boutique', name: 'products')]
 
+    /**
+     *@Route("/boutique", name= "products")
+     */
     public function index(): Response
     {
 
-        $product =$this->entityManager->getRepository(Product::class)->findAll();
+        $product = $this->entityManager->getRepository(Product::class)->findAll();
 
         return $this->render('product/index.html.twig', [
 
-            'products' =>$product
+            'products' => $product
         ]);
     }
 
     #[Route('/produit/{slug}', name: 'product')]
-    
+
     public function show($slug): Response
     {
 
-        $product =$this->entityManager->getRepository(Product::class)->findOneBy(['slug'=>$slug]);
+        $product = $this->entityManager->getRepository(Product::class)->findOneBy(['slug' => $slug]);
 
-        if (!$product){
+        if (!$product) {
             return $this->redirectToRoute('products');
         }
 
         return $this->render('product/show.html.twig', [
 
-            'product' =>$product
+            'product' => $product
         ]);
     }
 }
