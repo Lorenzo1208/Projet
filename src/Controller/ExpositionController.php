@@ -8,7 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ExpositionController extends AbstractController
 {
-    #[Route('/exposition', name: 'exposition')]
+    /**
+     * @Route("/exposition", name= "exposition")
+     */
+
     public function index(): Response
     {
         return $this->render('exposition/index.html.twig');
