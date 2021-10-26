@@ -42,7 +42,9 @@ margin-top: 50px;
     font-size: 22px;
 }
 
-
+.img[src] {
+    float:left;
+}
 
 
 
