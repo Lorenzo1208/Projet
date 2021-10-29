@@ -19,31 +19,30 @@ class ProductCrudController extends AbstractCrudController
         return Product::class;
     }
 
-    
+
     public function configureFields(string $pageName): iterable
     {
-       return[
+        return [
 
-        TextField::new('name'),
-        SlugField::new('slug')->setTargetFieldName('name'),
-        TextField::new('subtitle'),
-        TextareaField::new('description'),
-        MoneyField::new('price')->setCurrency('EUR'),
-        AssociationField::new('category'),
-        ImageField::new('illustration')
-        ->setBasePath('uploads/')
-        ->setUploadDir('public/uploads/')
-        ->setUploadedFileNamePattern('[randomhash].[extension]')
-        ->setRequired(false)
-        ->setFormTypeOptions([
-            'constraints' => [
-                new File([
-                    'maxSize' => '50024k'
-                ])
-            ],
-        ]),
+            TextField::new('name'),
+            SlugField::new('slug')->setTargetFieldName('name'),
+            TextField::new('subtitle'),
+            TextareaField::new('description'),
+            MoneyField::new('price')->setCurrency('EUR'),
+            AssociationField::new('category'),
+            ImageField::new('illustration')
+                ->setBasePath('uploads/')
+                ->setUploadDir('public/uploads/')
+                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setRequired(false)
+                ->setFormTypeOptions([
+                    'constraints' => [
+                        new File([
+                            'maxSize' => '50024k'
+                        ])
+                    ],
+                ]),
 
-       ];
+        ];
     }
-    
 }
