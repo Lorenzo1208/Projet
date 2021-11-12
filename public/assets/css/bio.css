@@ -1,4 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+	--font-base: 'Nunito Sans', sans-serif;
+	--font-heading: 'Jost', sans-serif;
+	--font-logo: 'Bebas Neue', sans-serif;
+	--color-base: #585858;
+	--color-dark: #282828;
+	--color-black: #1a1a1a;
+	--border: 1px solid rgba(0, 0, 0, .1);
+	--shadow: 0 0.5em 1.5em -0.5em rgba(0, 0, 0, .5);
+	--transition: 0.35s ease all;
+}
+
+body {
+background: linear-gradient( #1C0125, #DB6BE2, #b687b6 );
+}
+
 .row{
+	color: white;
 	display: flex;
 	text-align: justify;
 	width: auto;
@@ -10,7 +29,9 @@
 
 .column{
 	flex: 2;
-	padding-right: 5%;
+	padding-right: 2%;
+	padding-left: 1%;
+	padding-bottom: 2%;
 }
 
 .artist-image{
@@ -22,4 +43,9 @@
 .citation{
 	color: black; 
 	font: italic 1.2em "Fira Sans", serif;
+}
+
+h1 {
+	color : white;
+	font-family: var(--font-base);
 }
