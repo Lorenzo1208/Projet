@@ -52,14 +52,14 @@ margin-top: 50px;
 
 .button {
     flex: 1 1 auto;
-    margin: 10px;
-    padding: 13px;
-    border: 2px solid #f7f7f7;
+    margin: 3px;
+    padding: 5px;
+    border: 1px solid #f7f7f7;
     text-align: center;
     text-transform: uppercase;
     position: relative;
     overflow: hidden;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 .button:after {
     position: absolute;
