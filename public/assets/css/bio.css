@@ -54,7 +54,7 @@ h1 {
 
 
 
-.button {
+.buttonC {
 	flex: 1 1 auto;
 	margin: 10px;
 	padding: 20px;
@@ -65,7 +65,7 @@ h1 {
 	overflow: hidden;
 	transition: 0.3s;
 }
-.button:after {
+.buttonC:after {
 	position: absolute;
 	transition: 0.3s;
 	content: '';
@@ -75,63 +75,63 @@ h1 {
 	height: 3px;
 	background: #f7f7f7;
 }
-.button:nth-of-type(2):after {
+.buttonC:nth-of-type(2):after {
 	left: 0;
 }
-.button:nth-of-type(3):after {
+.buttonC:nth-of-type(3):after {
 	right: 0;
 	left: auto;
 }
-.button:nth-of-type(4):after {
+.buttonC:nth-of-type(4):after {
 	left: 0;
 	bottom: auto;
 	top: -3px;
 	width: 100%;
 }
-.button:nth-of-type(5):after {
+.buttonC:nth-of-type(5):after {
 	height: 120%;
 	left: -10%;
 	transform: skewX(15deg);
 	z-index: -1;
 }
-.button:hover {
+.buttonC:hover {
 	cursor: pointer;
 }
-.button:hover:after {
+.buttonC:hover:after {
 	width: 100%;
 	left: 0;
 }
-.button:hover:nth-of-type(4):after {
+.buttonC:hover:nth-of-type(4):after {
 	top: calc(100% - 3px);
 }
-.button:hover:nth-of-type(5) {
+.buttonC:hover:nth-of-type(5) {
 	color: #5bcaff;
 }
-.button:hover:nth-of-type(5):after {
+.buttonC:hover:nth-of-type(5):after {
 	left: -10%;
 	width: 120%;
 }
-.button:hover:nth-of-type(6) {
+.buttonC:hover:nth-of-type(6) {
 	border-radius: 30px;
 }
-.button:hover:nth-of-type(6):after {
+.buttonC:hover:nth-of-type(6):after {
 	width: 0%;
 }
-.button:hover:nth-of-type(7) {
+.buttonC:hover:nth-of-type(7) {
 	transform: scale(1.2);
 }
-.button:hover:nth-of-type(7):after {
+.buttonC:hover:nth-of-type(7):after {
 	width: 0%;
 }
-.button:hover:nth-of-type(8) {
+.buttonC:hover:nth-of-type(8) {
 	box-shadow: inset 0px 0px 0px 3px #f7f7f7;
 }
-.button:hover:nth-of-type(8):after {
+.buttonC:hover:nth-of-type(8):after {
 	width: 0%;
 }
-.button:hover:nth-of-type(9) {
+.buttonC:hover:nth-of-type(9) {
 	box-shadow: 0px 0px 0px 3px #f7f7f7;
 }
-.button:hover:nth-of-type(9):after {
+.buttonC:hover:nth-of-type(9):after {
 	width: 0%;
 }
