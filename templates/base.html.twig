@@ -1,195 +1,31 @@
 <!doctype html>
 <html lang="fr">
 <head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>{% block title %}Antonin Fournet {% endblock %}</title>
+    <title>{% block title %}Antonin Fournet{% endblock %}</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap & CSS -->
     <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('assets/css/antonin.css')}}">
     
-    
-    <!-- Custom styles for this template -->
-    <link href="{{asset('assets/css/carousel.css')}}" rel="stylesheet">
-</head>
-<body>
-<header>
-
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="{{ path('home') }}">Antonin Fournet</a>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-             
-                    <div class="button">
-
-                    <li class="nav-item active">
-             
-                    <a class="nav-link" href="{{ path('home') }}">Accueil  <span class="sr-only">(current)</span></a>
-             
-                    </div>
-             
-                    </li>   
-
-             
-                    <div class="button">     
-             
-                    <li class="nav-item active">
-             
-                    <a class="nav-link" href="{{ path('gallery')}}">Gallerie</a>
-             
-                    </div>
-             
-                    </li>  
 
 
-                    <div class="button">
-             
-                    <li class="nav-item active">
-             
-                    <a class="nav-link" href="{{path('exposition')}}">Expositions</a>
-             
-                    </div>
-
-                    </li>
-
-             
-                    <div class="button">
-             
-                    <li class="nav-item active">
-             
-                    <a class="nav-link" href="{{path('products')}}">Boutique</a>
-             
-                    </div>
-             
-                    </li>   
-
-
-                    <div class="button">
-             
-                    <li class="nav-item active">
-             
-                    <a class="nav-link" href="{{path('biographie')}}">Biographie</a>
-             
-                    </div>
-             
-                    </li> 
-
-             
-                    <li class="nav-item active">
-             
-                    <div class="button">
-             
-                    <a class="nav-link" href="{{path('cours')}}">Les cours</a>
-             
-                    </div>
-             
-                    </li>  
-
-             
-                    <li class="nav-item active">
-             
-                    <div class="button">
-             
-                    <a class="nav-link" href="{{path('contact')}}">Contact</a>
-             
-                    </div>
-             
-                    </li>  
-
-             
-                    <li class="nav-item active">
-             
-                    <div class="button">
-             
-                    <a class="nav-link" href="{{path('test')}}">Test</a>
-             
-                    </div>
-             
-                    </li>  
-            
-            </ul>
-          
-          <div class="navbar-item-custom">
-            {% if app.user %}
-            <a href="{{ path('account') }}">Mon compte <small>({{app.user.firstname}})</small></a> | <a href="{{ path('app_logout') }}">Déconnexion</a>
-            {% else %}
-
-                <div class="button">
-                    <a href="{{ path('app_login') }}">Connexion</a> | <a href="{{ path('register') }}">Inscription</a>
-                </div>
-
-           {% endif %}
-          </div>
-        </div>
-    </nav>
-</header>
-
-<main role="main">
-{% if block('carousel') is defined%}
-
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
-                <div class="container">
-                    <div class="carousel-caption text-left">
-                        <h1>Example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Another example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
-                <div class="container">
-                    <div class="carousel-caption text-right">
-                        <h1>One more for good measure.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    {% endif %}
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing {% if block('carousel') is not defined%}mt-5{% endif %}">
+<ul>
+  <li><a href="{{ path('home') }}">Accueil</a></li>
+  <li><a href="{{ path('biographie') }} ">Biographie</a></li>
+  <li><a href="{{ path('gallery') }} ">Gallerie</a></li>
+  <li><a href="{{ path('products') }}">Boutique</a></li>
+  <li><a href="{{ path('cours') }}">Cours</a></li>
+  <li><a href="{{ path('exposition') }}">Exposition</a></li>
+  <li><a href="{{ path('contact') }}">Contact</a></li>
+  <li><a href="{{ path('app_login') }}">Connexion</a></li>
+  <li><a href="{{ path('register') }}">Inscription</a></li>
+  
+</ul>
 
 {% block content %}
 {% endblock %}
@@ -199,9 +35,8 @@
 </main>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script>
-<script src="{{asset('assets/js/test.js')}}"></script>
+ <script src="{{asset('assets/js/antonin.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   
  
- 
-
-</body>
-</html>
