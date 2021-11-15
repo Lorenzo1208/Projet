@@ -5,7 +5,7 @@
 {% block content %}
 
 <html>
-<form>
+
 	<header class="site-header">
 
    		<link href="{{asset('assets/css/gallerie.css')}}" rel="stylesheet">
@@ -40,38 +40,39 @@
 
 
 
-
-
+.flex-container {
+      display: flex;
+  
+         
+		  }
+      
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px;
+}
 
 
 </style>
 
 
-
-
-
-
 	</header>
 
 	
-    
-	<div class="row">
-
-		<div class="col-md-12	">
-
-			<div class="row product-container">
- 
+    <div class="row product-container">
+		
 		{% for products in product %}
 
-					<div class="col-md-4">
-					
-         	<div class="products-item text-center">	
-		 <div class="hover13 column">
+		<div class="flex-container">
 		
+		<div class="hover13 column">
+		<div>
             <figure><a href="{{ path('products', { 'slug' : products.slug }) }}"><img src="/uploads/{{products.illustration}}" class="w3-hover-opacity" /> </a></figure>
-			</div>
-    	 </div>
-		  </div>	
+		</div>
+		</div>
+		</div>
 	    {% endfor %}
-    </form>
+
+    
 {% endblock %}

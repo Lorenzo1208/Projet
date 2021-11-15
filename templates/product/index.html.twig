@@ -7,10 +7,6 @@
 
 <header class="site-header">
 
-    <link href="{{asset('assets/css/boutique.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('assets/css/boutique.css')}}">
-	
-
 <ul>
 <div class = "navbar">
 		<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
@@ -25,6 +21,9 @@
   <li><a href="{{ path('register') }}">Inscription</a></li>
   </div>
 </ul>
+    <link href="{{asset('assets/css/boutique.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('assets/css/boutique.css')}}">
+	
 	<div class="container row">
 		<h1 class="site-brand">
 			<a href="#">La Boutique - Antonin Fournet</a>
@@ -89,13 +88,13 @@ figure:hover+span {
 
 		</div>
 
-		<div class="col-md-10">
+		<div class="col-xl-10">
 
 			<div class="row product-container">
 
 				{% for products in product %}
 
-					<div class="col-md-4">
+					<div class="col-xl-4">
 <div class="hover13 column">
 						<div class="products-item text-center">
 					
