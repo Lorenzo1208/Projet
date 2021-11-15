@@ -1,5 +1,19 @@
 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
+
+
+  
+  .row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 1px;
+  }
+  
+
+
+
+ 
 figure {
 	
 	margin: 0;
@@ -12,10 +26,6 @@ figure:hover+span {
 	opacity: 1;
 }
 
-
-
-
-/* Flashing */
 .hover13 figure:hover img {
 	opacity: 1;
 	-webkit-animation: flash 1.5s;
@@ -42,41 +52,8 @@ figure:hover+span {
 
 
 
-div.myGallery {
-	border: 2px solid rgb(0, 0, 0);
- }
- div.myGallery:hover {
-	border: 1px solid rgb(0, 0, 0);
- }
- div.myGallery img {
-	width: 100%;
-	height: auto;
- }
- div.desc {
-	padding: 20px;
-	text-align: center;
- }
- .responsive {
-	padding: 0 5px;
-	float: left;
-	width: 24.99999%;
- }
- @media only screen and (max-width: 700px) {
-	.responsive {
-	   width: 49.99999%;
-	   margin: 5px 0;
-	}
- }
- @media only screen and (max-width: 500px) {
-	.responsive {
-	   width: 100%;
-	}
- }
- .clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
- }
+
+
 
 
 

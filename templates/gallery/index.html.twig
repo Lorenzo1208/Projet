@@ -5,12 +5,30 @@
 {% block content %}
 
 <html>
-
+<form>
 	<header class="site-header">
 
    		<link href="{{asset('assets/css/gallerie.css')}}" rel="stylesheet">
     	<link rel="stylesheet" href="{{asset('assets/css/gallerie.css')}}">
 		
+
+
+
+<ul>
+<div class = "navbar">
+		<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
+  <li><a href="{{ path('home') }}">Accueil</a></li>
+  <li><a href="{{ path('biographie') }} ">Biographie</a></li>
+  <li><a href="{{ path('gallery') }} ">Gallerie</a></li>
+  <li><a href="{{ path('products') }}">Boutique</a></li>
+  <li><a href="{{ path('cours') }}">Cours</a></li>
+  <li><a href="{{ path('exposition') }}">Exposition</a></li>
+  <li><a href="{{ path('contact') }}">Contact</a></li>
+  <li><a href="{{ path('app_login') }}">Connexion</a></li>
+  <li><a href="{{ path('register') }}">Inscription</a></li>
+  </div>
+</ul>
+
 		<div class="container row">
 		<h1 class="site-brand">
 			<a href="#">La Gallerie - Antonin - Fournet</a>
@@ -19,6 +37,8 @@
 
 
 <style>
+
+
 
 
 
@@ -34,11 +54,18 @@
 	</header>
 
 	
-           
+    
+	<div class="row">
+
+		<div class="col-md-12	">
+
+			<div class="row product-container">
+ 
 		{% for products in product %}
 
-		  <div class = "responsive">
-         <div class = "myGallery">
+					<div class="col-md-4">
+					
+         	<div class="products-item text-center">	
 		 <div class="hover13 column">
 		
             <figure><a href="{{ path('products', { 'slug' : products.slug }) }}"><img src="/uploads/{{products.illustration}}" class="w3-hover-opacity" /> </a></figure>
@@ -46,7 +73,5 @@
     	 </div>
 		  </div>	
 	    {% endfor %}
-    
-    
-
+    </form>
 {% endblock %}
