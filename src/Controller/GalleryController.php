@@ -2,18 +2,72 @@
 
 namespace App\Controller;
 
+use App\Classe\Search;
+use App\Entity\Product;
+use App\Form\SearchType;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class GalleryController extends AbstractController
-{
-    /**
-     * @Route("/gallerie", name= "gallery")
-     */
 
-    public function index(): Response
+{
+
+    private $entityManager;
+
+    public function __construct(EntityManagerInterface $entityManager)
     {
-        return $this->render('gallery/index.html.twig');
+        $this->entityManager = $entityManager;
+    }
+
+  /**
+     *@Route("/gallerie", name= "gallery")
+     */
+    public function index(Request $request): Response 
+    {
+        
+        $product = $this->entityManager->getRepository(Product::class)->findAll();
+
+        $search =new Search();
+        $form = $this->createForm(SearchType::class, $search);
+
+        
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()) {
+           
+           
+
+            $product = $this->entityManager->getRepository(Product::class)->findWithSearch($search);
+
+        }
+
+        return $this->render('gallery/index.html.twig', [
+
+            'product' => $product,
+            'form' => $form->createView(),
+            
+        ]);
+    }
+
+
+    /**
+     * @Route("/product/{slug}", name= "product")
+     */
+    public function show($slug): Response
+    {
+
+        $product = $this->entityManager->getRepository(Product::class)->findOneBy(['slug' => $slug]);
+
+        if (!$product) {
+            return $this->redirectToRoute('product');
+        }
+
+        return $this->render('product/show.html.twig', [
+
+            'product' => $product
+        ]);
     }
 }

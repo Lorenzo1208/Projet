@@ -7,273 +7,96 @@
 
 <header class="site-header">
 
-   <link href="{{asset('assets/css/gallerie.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('assets/css/gallerie.css')}}">
+    <link href="{{asset('assets/css/boutique.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('assets/css/boutique.css')}}">
+	
 	<div class="container row">
 		<h1 class="site-brand">
-			<a href="#">La Boutique</a>
-		</h1>
-		<nav class="site-nav">
-			<ul class="menu menu--main">
-				<li class="menu-item">
-					<a href="#" class="menu-link">Accueil</a>	
-				</li>
-				<li class="menu-item">
-					<a href="#" class="menu-link">Artiste</a>	
-				</li>
-				<li class="menu-item">
-					<a href="#" class="menu-link">Evenements</a>	
-				</li>
-				<li class="menu-item">
-					<a href="#" class="menu-link">Bio</a>	
-				</li>
-				<li class="menu-item">
-					<a href="#" class="menu-link">Contact</a>	
-				</li>
-			</ul>
-		</nav>
+			<a href="#">La Boutique - Antonin Fournet</a>
+		</h1>	
+		
 	</div>
+
+	<style>
+
+
+figure {
+	
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+
+
+
+
+/* Flashing */
+.hover13 figure:hover img {
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+
+	</style>
+
 </header>
-<div class="row">
 
-    <div class="col-md-3">
+	<div class="row">
 
-        <h5>FILTRER</h5>
-        {{form(form)}}
+		<div class="col-md-2">
 
-    </div>
+			<h5>FILTRER</h5>
+			{{form(form)}}
 
-    <div class="col-md-9">
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<main class="main-content">
-		
-	<header id="works" class="main-header container row">
-		<h2 class="page-title">Antonin Fournet</h2>
-		<nav class="page--sub-nav">
-			<ul class="menu menu--sub">
-				<li class="menu-item">
-					<a href="#works" class="menu-link">Artist Works</a>
-				</li>
-				<li class="menu-item">
-					<a href="#profile" class="menu-link">Artist Profile</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-		
-	<section class="section artwork-grid container fadeIn">
-		<article class="artwork-item">
-			<span class="artwork--img">
-
-				<a href="product" class="artwork--link">
-
-					        {% for products in product %}
-
-                <div class="col-md-4">
-
-                    <div class="products-item text-center">
-                   
-                        <a href="{{ path('product', { 'slug' : products.slug }) }}"><img src="/uploads/{{products.illustration}}" alt="{{products.name}}" class="img-fluid">
-                    
-                        <h4>{{ products.name }}</h4>
-                   
-                        <span class="products-subtitle">{{products.subtitle}}</span>
-                   
-                        <span class="products-price">{{ (products.price/100) | number_format(2, ',', '.') }} €</span>
-
-                    </div>
-
-                </div>
-
-            {% endfor %}
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 01</a>
-					</li>
-					<li class="menu-item artwork--dimensions">80 x 60</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-		<article class="artwork-item">
-			<span class="artwork--img">
-				<a href="#" class="artwork--link">
-					<img src="//source.unsplash.com/random/600x800/?abstract" alt="02" title="02">
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 02</a>
-					</li>
-					<li class="menu-item artwork--dimensions">60 x 80</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-		<article class="artwork-item">
-			<span class="artwork--img">
-				<a href="#" class="artwork--link">
-					<img src="//source.unsplash.com/random/800x600/?abstract" alt="03" title="03">
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 03</a>
-					</li>
-					<li class="menu-item artwork--dimensions">80 x 60</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-		<article class="artwork-item">
-			<span class="artwork--img">
-				<a href="#" class="artwork--link">
-					<img src="//source.unsplash.com/random/600x800/?abstract" alt="04" title="04">
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 04</a>
-					</li>
-					<li class="menu-item artwork--dimensions">60 x 80</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-		<article class="artwork-item">
-			<span class="artwork--img">
-				<a href="#" class="artwork--link">
-					<img src="//source.unsplash.com/random/800x600/?abstract" alt="05" title="05">
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 05</a>
-					</li>
-					<li class="menu-item artwork--dimensions">80 x 60</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-		<article class="artwork-item">
-			<span class="artwork--img">
-				<a href="#" class="artwork--link">
-					<img src="//source.unsplash.com/random/600x800/?abstract" alt="06" title="06">
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 06</a>
-					</li>
-					<li class="menu-item artwork--dimensions">60 x 80</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-		<article class="artwork-item">
-			<span class="artwork--img">
-				<a href="#" class="artwork--link">
-					<img src="//source.unsplash.com/random/800x600/?abstract" alt="07" title="07">
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 07</a>
-					</li>
-					<li class="menu-item artwork--dimensions">80 x 60</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-	</section>
-
-	<section id="profile" class="section container">
-		<div class="row">
-			<h3 class="section-title">Artist Profile</h3>
 		</div>
-		<div class="row">
-			<div class="col">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quia officia quaerat est illo, temporibus reprehenderit deleniti repellendus, facilis optio perspiciatis veritatis placeat doloremque voluptate accusantium eaque! Quasi, accusantium cupiditate!</p>
-			</div>
-			<div class="col">
-				<div id="statement">
-					<h4>Artist Statement</h4>
-				</div>
-				<div id="accomplishments">
-					<h4>Artist Accomplishements</h4>
-				</div>
-			</div>
-		</div>
-	</section>
-</main>
 
+		<div class="col-md-10">
 
+			<div class="row product-container">
 
+				{% for products in product %}
 
+					<div class="col-md-4">
 
+						<div class="products-item text-center">
+					
+							<a href="{{ path('product', { 'slug' : products.slug }) }}"><img src="/uploads/{{products.illustration}}" alt="{{products.name}}" class="img-thumbnail">
+						</a>
+							<h4>{{ products.name }}</h4>
+					
+							<span class="products-subtitle">{{products.subtitle}}</span>
+					
+							<span class="products-price">{{ (products.price/100) | number_format(2, ',', '.') }} €</span>
 
+						</div>
 
+					</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="row product-container">
-
-            {% for products in product %}
-
-                <div class="col-md-4">
-
-                    <div class="products-item text-center">
-                   
-                        <a href="{{ path('product', { 'slug' : products.slug }) }}"><img src="/uploads/{{products.illustration}}" alt="{{products.name}}" class="img-fluid">
-                    
-                        <h4>{{ products.name }}</h4>
-                   
-                        <span class="products-subtitle">{{products.subtitle}}</span>
-                   
-                        <span class="products-price">{{ (products.price/100) | number_format(2, ',', '.') }} €</span>
-
-                    </div>
-
-                </div>
-
-            {% endfor %}
+				{% endfor %}
 
         </div>
 
@@ -282,4 +105,14 @@
 </div>
 
 
+
+
+
+
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.9.0/umd/react.production.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.production.min.js"></script>
+<script src="{{asset('assets/js/boutique.js')}}"></script>
 {% endblock %}
+

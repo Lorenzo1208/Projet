@@ -48,12 +48,13 @@ class ProductController extends AbstractController
 
             'product' => $product,
             'form' => $form->createView(),
+            
         ]);
     }
 
 
     /**
-     * @Route("/produit/{slug}", name= "product")
+     * @Route("/product/{slug}", name= "product")
      */
     public function show($slug): Response
     {
@@ -61,7 +62,7 @@ class ProductController extends AbstractController
         $product = $this->entityManager->getRepository(Product::class)->findOneBy(['slug' => $slug]);
 
         if (!$product) {
-            return $this->redirectToRoute('products');
+            return $this->redirectToRoute('product');
         }
 
         return $this->render('product/show.html.twig', [

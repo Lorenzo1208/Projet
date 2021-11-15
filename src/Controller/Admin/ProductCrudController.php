@@ -35,13 +35,7 @@ class ProductCrudController extends AbstractCrudController
                 ->setUploadDir('public/uploads/')
                 ->setUploadedFileNamePattern('[randomhash].[extension]')
                 ->setRequired(false)
-                ->setFormTypeOptions([
-                    'constraints' => [
-                        new File([
-                            'maxSize' => '50024k'
-                        ])
-                    ],
-                ]),
+              
 
         ];
     }

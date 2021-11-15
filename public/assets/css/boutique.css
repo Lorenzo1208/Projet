@@ -1,232 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
- :root {
-	 --font-base: 'Nunito Sans', sans-serif;
-	 --font-heading: 'Jost', sans-serif;
-	 --font-logo: 'Bebas Neue', sans-serif;
-	 --color-base: #585858;
-	 --color-dark: #282828;
-	 --color-black: #1a1a1a;
-	 --border: 1px solid rgba(0, 0, 0, .1);
-	 --shadow: 0 0.5em 1.5em -0.5em rgba(0, 0, 0, .5);
-	 --transition: 0.35s ease all;
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.button-hover:hover {
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-ms-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+  }
+
+
+.row {
+	margin: 15px;
+  }
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
 }
- html {
-	 box-sizing: border-box;
-	 scroll-behavior: smooth;
+
+
+
+/* Grid */
+.masonry-wrap {
+  height: 700px;
+  overflow: hidden;
+  width: 100%;
 }
- *, *::before, *::after {
-	 box-sizing: inherit;
+
+.masonry-section {
+  float: left;
+  position: relative;
 }
- body {
-	 font-family: var(--font-base);
-	 font-weight: 300;
-	 letter-spacing: 0.04em;
-	 color: var(--color-base);
-	 scroll-behavior: smooth;
-	 -webkit-font-smoothing: antialiased;
+
+.masonry-section a {
+  text-decoration: none;
 }
- h1, h2, h3, h4, h5, h6 {
-	 margin: 0;
-	 font-family: var(--font-base);
-	 font-weight: 300;
-	 line-height: 1.1;
-	 letter-spacing: 0.1em;
+
+.masonry-half {
+  background: #01a1da;
+  border-right: 1px solid white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 700px;
+  width: 50%;
 }
- p {
-	 margin: 0;
-	 margin-bottom: 1em;
-	 line-height: 1.6;
+
+.masonry-top-half {
+  background: #7dc24f;
+  border-bottom: 1px solid white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 350px;
+  width: 50%;
 }
- a {
-	 text-decoration: none;
+
+.masonry-bottom-quarter {
+  height: 350px;
+  width: 25%;
 }
- img {
-	 display: block;
-	 max-width: 100%;
+
+.masonry-bottom-quarter-left {
+  background: #e43b94;
+  border-right: 1px solid white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
- .container {
-	 width: 90%;
-	 max-width: 1400px;
-	 margin: 0 auto;
+
+.masonry-bottom-quarter-right {
+  background: #f58232;
 }
- @media screen and (min-width: 768px) {
-	 .row {
-		 display: flex;
-	}
+
+
+
+/* Background Images */
+.m1-bg {
+  display: inline-block;
+  position: absolute;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/left-full.jpg');
+  background-position: 50%;
+  background-size: cover;
+  transition: opacity .6s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
- .col {
-	 flex: 1;
-	 padding: 1.5em;
+
+.m2-bg {
+  display: inline-block;
+  position: absolute;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/the-hub-on-canal-new-smyrna-beach.jpg');
+  background-position: 50%;
+  background-size: cover;
+  transition: opacity .6s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
- .section {
-	 margin-bottom: 2em;
-	 border-bottom: var(--border);
+
+.m3-bg {
+  display: inline-block;
+  position: absolute;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/bottom-left.jpg');
+  background-position: 50%;
+  background-size: cover;
+  transition: opacity .6s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
- .menu {
-	 list-style-type: none;
-	 padding-left: 0;
+
+.m4-bg {
+  display: inline-block;
+  position: absolute;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/bottom-right.jpg');
+  background-position: 50%;
+  background-size: cover;
+  transition: opacity .6s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
- .menu-link {
-	 font-family: var(--font-heading);
-	 font-weight: normal;
-	 color: var(--color-base);
-	 transition: var(--transition);
-	 transition-property: color;
+
+
+
+/* Masonry Descriptions */
+.masonry-description-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  opacity: 0;
+  text-align: center;
+  transition: opacity .8s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
- .menu-link:focus, .menu-link:hover {
-	 color: var(--color-black);
+
+.masonry-title {
+  clear: both;
+  color: #fff;
+  display: block;
+  font-size: 30px;
+  text-transform: uppercase;
 }
- .menu--main .menu-item, .menu--sub .menu-item {
-	 font-size: 0.875em;
-	 text-transform: uppercase;
+
+.masonry-subtitle {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
 }
- .menu--main {
-	 font-family: var(--font-heading);
+
+
+
+/* Hovers */
+.masonry-section:hover .masonry-bg {
+  opacity: 0.3;
 }
- .menu--main .menu-item + .menu-item {
-	 margin-top: 0.5em;
+
+.masonry-section:hover .masonry-description-wrap {
+  opacity: 1;
 }
- @media screen and (min-width: 576px) {
-	 .menu--main .menu-item + .menu-item {
-		 margin-top: initial;
-		 margin-left: 2rem;
-	}
-}
- @media screen and (min-width: 576px) {
-	 .menu--main {
-		 display: flex;
-	}
-}
- .menu--sub {
-	 display: flex;
-}
- .menu--sub .menu-item + .menu-item {
-	 margin-left: 2rem;
-}
- .main-header.row {
-	 justify-content: space-between;
-	 align-items: center;
-	 margin-bottom: 2em;
-}
- .site-header {
-	 margin-bottom: 2em;
-	 padding-top: 2em;
-	 padding-bottom: 1em;
-	 text-align: center;
-	 border-bottom: var(--border);
-}
- .site-header .row {
-	 flex-direction: column;
-	 align-items: center;
-}
- .site-brand a {
-	 font-family: var(--font-logo);
-	 font-weight: 400;
-	 font-size: xxx-large;
-	 letter-spacing: 0.1em;
-	 text-transform: uppercase;
-	 color: var(--color-dark);
-	 transition: var(--transition);
-	 transition-property: color;
-}
- .site-brand a:focus, .site-brand a:hover {
-	 color: var(--color-black);
-}
- .page-title, .section-title {
-	 font-family: var(--font-heading);
-	 text-transform: uppercase;
-}
- .artwork-grid {
-	 display: flex;
-	 flex-flow: row wrap;
-}
- .artwork-item {
-	 display: flex;
-	 justify-content: center;
-	 flex-direction: column;
-	 margin: 0 2em 2em;
-	 text-align: center;
-}
- @media screen and (min-width: 576px) {
-	 .artwork-item {
-		 flex-basis: calc((100% / 2) - 4em);
-	}
-}
- @media screen and (min-width: 768px) {
-	 .artwork-item {
-		 flex-basis: calc((100% / 3) - 4em);
-	}
-}
- @media screen and (min-width: 992px) {
-	 .artwork-item {
-		 flex-basis: calc((100% / 4) - 4em);
-	}
-}
- .artwork--img {
-	 display: flex;
-	 align-items: center;
-	 height: 400px;
-}
- .artwork--link {
-	 overflow: hidden;
-	 box-shadow: var(--shadow);
-}
- .artwork--link img {
-	 transition: var(--transition);
-	 transition-property: opacity, transform;
-}
- .artwork--link img:hover, .artwork--link img:focus {
-	 opacity: 0.66;
-	 transform: scale(1.05);
-}
- .artwork--content {
-	 display: block;
-	 margin: 0.5em 1em;
-}
- .artwork--content .menu-item + .menu-item {
-	 margin-top: 0.25em;
-}
- .artwork--title {
-	 font-weight: 400;
-	 letter-spacing: 0.125em;
-	 text-transform: uppercase;
-}
- .artwork--dimensions, .artwork--value {
-	 font-size: 0.875em;
-}
- .artwork--dimensions::after {
-	 content: " inches";
-}
- .artwork--value::before {
-	 content: "$";
-}
- #profile .row {
-	 margin-bottom: 2em;
-}
- #profile .col {
-	 background: rgba(0, 0, 0, .05);
-}
- #profile .col + .col {
-	 margin-top: 1em;
-}
- @media screen and (min-width: 576px) {
-	 #profile .col + .col {
-		 margin-top: initial;
-		 margin-left: 2em;
-	}
-}
- .fadeIn {
-	 opacity: 0;
-	 animation: fadeIn ease-in 0.35s;
-	 animation-fill-mode: forwards;
-	 animation-duration: 2.35s;
-}
- @keyframes fadeIn {
-	 from {
-		 opacity: 0;
-	}
-	 to {
-		 opacity: 1;
-	}
-}
- 
+
+
+
+
+
+
+
+
+
+
+
+li { 
+    display: table-cell; 
+    position: relative; 
+    padding: 15px 0;
+  }
+  a {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+  a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  @media screen and (max-height: 300px) {
+      ul {
+          margin-top: 40px;
+      }
+  }
+  
