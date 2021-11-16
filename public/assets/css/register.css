@@ -1,3 +1,16 @@
 *{
 	padding-left: 10px;
 }
+
+.form-group{
+	width: 350px;
+}
+
+h1{
+	margin-bottom: 25px;
+}
+
+.login-show{
+	font-size: 12px;
+	margin-left: 14px;
+}

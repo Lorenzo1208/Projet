@@ -6,19 +6,18 @@
 
 <html>
 
-	<header class="site-header">
+    <header class="site-header">
 
-   		<link href="{{asset('assets/css/gallerie.css')}}" rel="stylesheet">
-    	<link rel="stylesheet" href="{{asset('assets/css/gallerie.css')}}">
-		
+           <link href="{{asset('assets/css/gallerie.css')}}" rel="stylesheet">
+
+
 
 
 
 <ul>
 <div class = "navbar">
-		<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
+        <img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
   <li><a href="{{ path('home') }}">Accueil</a></li>
-  <li><a href="{{ path('biographie') }} ">Biographie</a></li>
   <li><a href="{{ path('gallery') }} ">Gallerie</a></li>
   <li><a href="{{ path('products') }}">Boutique</a></li>
   <li><a href="{{ path('cours') }}">Cours</a></li>
@@ -29,57 +28,42 @@
   </div>
 </ul>
 
-		<h1 class="site-brand">
-			<a href="#">La Gallerie - Antonin - Fournet</a>
-		</h1>
-		</div>
+        <h1 class="site-brand">
+            <a href="#">La Gallerie - Antonin - Fournet</a>
+        </h1>
+        </div>
 
 
 <style>
 
-.grid-item {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
-  
-  padding: 10px;
-}
 
 </style>
-	</header>
+    </header>
 
-		<!--<div class="row">-->
-
-			
-
-								{% for products in product %}
-										
+        <div class="row">
 
 
 
+                                {% for products in product %}
 
-<article class="artwork-item">
-			
-				
-									
-										<div class="hover13 column">
-											
+<article class="marginauto">
 
-												<figure><a href="{{ path('products', { 'slug' : products.slug }) }}"><img src="/uploads/{{products.illustration}}" class="artwork--link" /> </a></figure>
-										
-										</div>
+                                        <div class="marginau">
+
+
+                                                <figure><a href="{{ path('products', { 'slug' : products.slug }) }}" >
+                                                <img class="marginau" src="/uploads/{{products.illustration}}" width=300px height=200px alt="centered image"/> </a></figure>
+
+                                        </div>
 
 
 </article>
+                                           {% endfor %}
+
+                                    <script src="{{asset('assets/js/gallerie.js')}}"></script>
 
 
-										
-											{% endfor %}
-											
-									<script src="{{asset('assets/js/gallerie.js')}}"></script>
 
-					
+        </div>
 
-		<!--</div>-->
-
-					{% endblock %}
+                    {% endblock %}

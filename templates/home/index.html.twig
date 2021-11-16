@@ -1,10 +1,6 @@
 {% extends 'base.html.twig' %}
-{% block carousel %}{% endblock %}
-{% block content %}
 
-	<link href="{{asset('assets/css/home.css')}}" rel="stylesheet">
-		<link rel="stylesheet" href="{{asset('assets/css/home.css')}}">
-       
+{% block content %}       
 <html>
   <head>
 
@@ -12,7 +8,6 @@
 <div class = "navbar">
 		<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
   <li><a href="{{ path('home') }}">Accueil</a></li>
-  <li><a href="{{ path('biographie') }} ">Biographie</a></li>
   <li><a href="{{ path('gallery') }} ">Gallerie</a></li>
   <li><a href="{{ path('products') }}">Boutique</a></li>
   <li><a href="{{ path('cours') }}">Cours</a></li>
@@ -22,44 +17,54 @@
   <li><a href="{{ path('register') }}">Inscription</a></li>
   </div>
 </ul>
+<hr>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="home.js"></script>
+		<link href="{{asset('assets/css/home.css')}}" rel="stylesheet">
+		<link rel="stylesheet" href="{{asset('assets/css/home.css')}}">
+	</head>
+	<body>
+	
+<div class="container">
+  <div class="container-inner">
+    <div class="main-content">
+      <div class="main-headings" id="main-headings-js">
+      <p id="by-line">French 🇫🇷 - Third year in beaux arts of Tours - Artist</p>
 
-    <style>
-     
-      .image {
-        background: url("/uploads/128928802_3449789141741548_8434449610011243469_n.jpg") no-repeat fixed;
-        background-position: center center;
-        background-size: cover;
-        min-height: 500px;
-      }
-      .content {
-        max-width: 1200px;
-        margin: 0 auto;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        position: relative;
-        z-index: 2;
-        height: 100%;
-      }
-    </style>
-  </head>
+      <div class="heading">
+        <h3 id="heading1">Découvrez</h3>
+        <h3 id="heading2">l'Artiste</h3>
+        <h1 id="heading3">Antonin</h1>
+      </div>
 
+      <div class="short-bio">
+        <p>"Pas d'art sans création, pas d'art sans émotion."</p>
+   
+      </div>
 
+      <a href="a" class="link" onclick="readMore()">En apprendre plus ...</a>
+      </div>
+      
+      <div class="more-info " id="more-info-js">
+        <hr>
+        <h5>Son histoire</h5>
+        <hr>
+				    <p>	Antonin Fournet, née en octobre 2000. Artiste et étudiant en 4ème année aux Beaux-Arts de Tours, obtient sa licence en 2021. Il se focalise principalement sur le domaine de la peinture et de la sculpture. Il aime réutiliser des éléments plastiques et les modifier lors de la création de ses œuvres.
+				</p>
+        
+    </div>
+    </div>
 
+    <div class="image-wrapper">
+    <div class="image-container">
+      <img class="image" src="/uploads/Screenshot 2021-11-15 17.05.01.png">
+    </div>
+  </div>
+</div>
+</div>
+<hr>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		
 
 
 
@@ -105,18 +110,12 @@
 
   
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
+   
   <!--Footer-->
 
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
       <script src="{{asset('assets/js/home.js')}}"></script>
       <script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script>
  <script src="{{asset('assets/js/antonin.js')}}"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
 {% endblock %}

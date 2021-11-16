@@ -1,3 +1,19 @@
 *{
 	padding-left: 10px;
 }
+
+.form-control{
+	width: 350px;
+}
+
+label{
+	margin-top: 15px;
+}
+
+
+.c{
+	font-size: 12px;
+	margin-left: 14px;
+}
+
+
