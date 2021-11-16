@@ -3,11 +3,16 @@
 
 
 
-  
+.marginau {
+    margin: 10px auto 10px;
+    display: block;
+}
+.marginauto {
+	margin: 0px 0px 0px;
+	margin-left: 0px;
+    display: block;
+}
 
-
-
- 
 figure {
 	
 	margin: 0;
