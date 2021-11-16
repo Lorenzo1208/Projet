@@ -8,7 +8,6 @@
     <link href="{{asset('assets/css/login.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('assets/css/login.css')}}">
 
-
 <ul>
 <div class = "navbar">
 		<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
@@ -33,8 +32,11 @@
             You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
         </div>
     {% endif %}
+<div class="login-reg-panel">
 <h1>Merci de vous connecter</h1>
    {# <h1 class="h3 mb-3 font-weight-normal">Merci de vous connecter</h1>#}
+   <div class="white-panel">
+			<div class="login-show">
     <label for="inputEmail">Votre email</label>
     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="Votre email"required autofocus>
     <label for="inputPassword">Votre mot de passe</label>
@@ -59,4 +61,7 @@
         Se connecter
     </button>
 </form>
+            <a class="c" href="" >Forgot password?</a>
+		</div>
+</div>
 {% endblock %}
