@@ -29,7 +29,6 @@
   </div>
 </ul>
 
-		<div class="container row">
 		<h1 class="site-brand">
 			<a href="#">La Gallerie - Antonin - Fournet</a>
 		</h1>
@@ -38,41 +37,49 @@
 
 <style>
 
-
-
-.flex-container {
-      display: flex;
+.grid-item {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
   
-         
-		  }
-      
-.flex-container > div {
-  background-color: #f1f1f1;
-  margin: 0px;
-  padding: 0px;
-  font-size: 0px;
+  padding: 10px;
 }
 
-
 </style>
-
-
 	</header>
 
-	
-    <div class="row product-container">
-		
-		{% for products in product %}
+		<!--<div class="row">-->
 
-		<div class="flex-container">
-		
-		<div class="hover13 column">
-		<div>
-            <figure><a href="{{ path('products', { 'slug' : products.slug }) }}"><img src="/uploads/{{products.illustration}}" class="w3-hover-opacity" /> </a></figure>
-		</div>
-		</div>
-		</div>
-	    {% endfor %}
+			
 
-    
-{% endblock %}
+								{% for products in product %}
+										
+
+
+
+
+<article class="artwork-item">
+			
+				
+									
+										<div class="hover13 column">
+											
+
+												<figure><a href="{{ path('products', { 'slug' : products.slug }) }}"><img src="/uploads/{{products.illustration}}" class="artwork--link" /> </a></figure>
+										
+										</div>
+
+
+</article>
+
+
+										
+											{% endfor %}
+											
+									<script src="{{asset('assets/js/gallerie.js')}}"></script>
+
+					
+
+		<!--</div>-->
+
+					{% endblock %}
