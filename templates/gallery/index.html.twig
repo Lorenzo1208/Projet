@@ -39,7 +39,7 @@
 
 .grid-item {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 30% auto 10%;
   grid-gap: 10px;
   
   padding: 10px;
@@ -48,7 +48,7 @@
 </style>
 	</header>
 
-		<!--<div class="row">-->
+		<div class="row">
 
 			
 
@@ -65,7 +65,7 @@
 										<div class="hover13 column">
 											
 
-												<figure><a href="{{ path('products', { 'slug' : products.slug }) }}"><img src="/uploads/{{products.illustration}}" class="artwork--link" /> </a></figure>
+												<figure><a href="{{ path('products', { 'slug' : products.slug }) }}" ><img class="marginauto" src="/uploads/{{products.illustration}}" width=300px height=200px alt="centered image"/> </a></figure>
 										
 										</div>
 
@@ -80,6 +80,6 @@
 
 					
 
-		<!--</div>-->
+		</div>
 
 					{% endblock %}
