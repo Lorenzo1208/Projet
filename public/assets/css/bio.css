@@ -359,3 +359,27 @@
 	max-width: 100%;
  max-height: 100%;
 }
+
+
+
+
+
+
+
+
+
+.image {
+	background: url("/uploads/128928802_3449789141741548_8434449610011243469_n.jpg") no-repeat fixed;
+	background-position: center center;
+	background-size: cover;
+	min-height: 500px;
+  }
+  .content {
+	max-width: 1200px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
+	z-index: 2;
+	height: 100%;
+  }
