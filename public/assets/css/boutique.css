@@ -1,0 +1,264 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.button-hover:hover {
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-ms-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+  }
+
+
+.row {
+	margin: 15px;
+  }
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Grid */
+.masonry-wrap {
+  height: 700px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.masonry-section {
+  float: left;
+  position: relative;
+}
+
+.masonry-section a {
+  text-decoration: none;
+}
+
+.masonry-half {
+  background: #01a1da;
+  border-right: 1px solid white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 700px;
+  width: 50%;
+}
+
+.masonry-top-half {
+  background: #7dc24f;
+  border-bottom: 1px solid white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 350px;
+  width: 50%;
+}
+
+.masonry-bottom-quarter {
+  height: 350px;
+  width: 25%;
+}
+
+.masonry-bottom-quarter-left {
+  background: #e43b94;
+  border-right: 1px solid white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.masonry-bottom-quarter-right {
+  background: #f58232;
+}
+
+
+
+/* Background Images */
+.m1-bg {
+  display: inline-block;
+  position: absolute;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/left-full.jpg');
+  background-position: 50%;
+  background-size: cover;
+  transition: opacity .6s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.m2-bg {
+  display: inline-block;
+  position: absolute;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/the-hub-on-canal-new-smyrna-beach.jpg');
+  background-position: 50%;
+  background-size: cover;
+  transition: opacity .6s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.m3-bg {
+  display: inline-block;
+  position: absolute;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/bottom-left.jpg');
+  background-position: 50%;
+  background-size: cover;
+  transition: opacity .6s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.m4-bg {
+  display: inline-block;
+  position: absolute;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/bottom-right.jpg');
+  background-position: 50%;
+  background-size: cover;
+  transition: opacity .6s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* Masonry Descriptions */
+.masonry-description-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  opacity: 0;
+  text-align: center;
+  transition: opacity .8s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.masonry-title {
+  clear: both;
+  color: #fff;
+  display: block;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.masonry-subtitle {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+
+
+/* Hovers */
+.masonry-section:hover .masonry-bg {
+  opacity: 0.3;
+}
+
+.masonry-section:hover .masonry-description-wrap {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+li { 
+    display: table-cell; 
+    position: relative; 
+    padding: 15px 0;
+  }
+  a {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+  a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  @media screen and (max-height: 300px) {
+      ul {
+          margin-top: 40px;
+      }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+figure {
+	
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+
+.hover13 figure:hover img {
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}

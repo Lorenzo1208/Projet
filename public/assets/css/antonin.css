@@ -1,52 +1,45 @@
-.navbar-item-custom, .navbar-item-custom a {
-    color: #fff;
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.footer-custom {
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #dfeaff;
-    padding-top: 18px;
+li { 
+  display: table-cell; 
+  position: relative; 
+  padding: 15px 0;
 }
 
-.float-custom {
-    padding: auto;
+a {
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+
+  position: relative;
 }
 
-.products-item h5 {
-    text-transform: uppercase;
-    font-size: 15px;
-    margin-bottom: 5px;
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: rgb(0, 0, 0);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
 
-.products-item{
-margin-top: 50px;
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
 }
 
-.products-item, .products-subtitle {
-    font-size: 14px;
-    display: block;
-    margin-bottom: 10px;
-    
+.row{
+  margin: 5px;
 }
-
-.products-item, .products-price {
-    font-size: 15px;
-    font-weight: bold;
-
-}
-
-.product-page-price{
-    font-size: 22px;
-}
-
-.img[src] {
-    float:left;
-}
-
-
-
-
-

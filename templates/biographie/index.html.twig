@@ -1,28 +1,73 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Biographie{% endblock %}
+{% block title %}Biographie
+{% endblock %}
 
 {% block content %}
-<head>
+	<head>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="bio.js"></script>
-    <link href="{{asset('assets/css/bio.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('assets/css/bio.css')}}">
-</head>
-<div class="artist-wrapper">
-  <img src="/uploads/Screenshot 2021-10-10 23.19.31.png" class="artist-image" />
-</div>
-<div class="wrapper">
-  <input type="checkbox" id="expand-artist-bio-input" class="expand-artist-bio-input" />
-  <div class="interior-artist-bio-wrapper">
-    <div class="interior-artist-bio">
-      Antonin Fournet, née en octobre 2000, artiste et étudiant en 4ème année aux Beaux-Arts de Tours, obtient sa licence en 2021. Il se focalise principalement sur le domaine de la peinture et de la sculpture. Il aime réutiliser des éléments plastiques et les modifier lors de la création de ses œuvres. 
-Aimant la vie ainsi que la biologie, il se questionne sur les enjeux environnementaux actuel et porte un discours écologique qu’il transmet dans son art. 
-Il s'intéresse et spécule sur un monde futur comme nous le montre son essaie, écrit lors de sa 3ème année, racontant l'histoire d'un astronaute qui découvre une planète recouverte de plastique et où la biologie ainsi que cette dernière sont en symbiose, comme si ces deux éléments avaient muté pour coexister. 
-Étant un grand amateur de plante, il aime toute forme de vie, cela l'inspire beaucoup dans son travail. Il veut contribuer à sensibiliser les consciences par rapport aux enjeux environnementaux qui sont de plus en plus critique. Rêvant d'un monde où l'écologie évolue positivement, il vous invite avec générosité à découvrir son travail. 
+<ul>
+<div class = "navbar">
+		<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
+  <li><a href="{{ path('home') }}">Accueil</a></li>
+  <li><a href="{{ path('biographie') }} ">Biographie</a></li>
+  <li><a href="{{ path('gallery') }} ">Gallerie</a></li>
+  <li><a href="{{ path('products') }}">Boutique</a></li>
+  <li><a href="{{ path('cours') }}">Cours</a></li>
+  <li><a href="{{ path('exposition') }}">Exposition</a></li>
+  <li><a href="{{ path('contact') }}">Contact</a></li>
+  <li><a href="{{ path('app_login') }}">Connexion</a></li>
+  <li><a href="{{ path('register') }}">Inscription</a></li>
+  </div>
+</ul>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="bio.js"></script>
+		<link href="{{asset('assets/css/bio.css')}}" rel="stylesheet">
+		<link rel="stylesheet" href="{{asset('assets/css/bio.css')}}">
+	</head>
+	<body>
+	
+<div class="container">
+  <div class="container-inner">
+    <div class="main-content">
+      <div class="main-headings" id="main-headings-js">
+      <p id="by-line">French 🇫🇷 -
+		Third year in beaux arts of Tours -
+		Artist</p>
+
+      <div class="heading">
+        <h3 id="heading1">Découvrez</h3>
+        <h3 id="heading2">l'Artiste</h3>
+        <h1 id="heading3">Antonin</h1>
+      </div>
+
+      <div class="short-bio">
+        <p>"Pas d'art sans création, pas d'art sans émotion."</p>
+   
+      </div>
+
+      <a href="a" class="link" onclick="readMore()">En apprendre plus ...</a>
+      </div>
+      
+      <div class="more-info " id="more-info-js">
+        <hr>
+        <h5>Son histoire</h5>
+        <hr>
+				    <p>	Antonin Fournet, née en octobre 2000. Artiste et étudiant en 4ème année aux Beaux-Arts de Tours, obtient sa licence en 2021. Il se focalise principalement sur le domaine de la peinture et de la sculpture. Il aime réutiliser des éléments plastiques et les modifier lors de la création de ses œuvres.
+				</p>
+        
+    </div>
+    </div>
+
+    <div class="image-wrapper">
+    <div class="image-container">
+      <img class="image" src="/uploads/Screenshot 2021-11-15 17.05.01.png">
     </div>
   </div>
-  <label for="expand-artist-bio-input" class="expand-artist-bio-label" />
 </div>
+</div>
+
+		
+	
+	</body>
 {% endblock %}

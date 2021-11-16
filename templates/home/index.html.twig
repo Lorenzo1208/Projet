@@ -1,68 +1,122 @@
 {% extends 'base.html.twig' %}
 {% block carousel %}{% endblock %}
 {% block content %}
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-            <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                <h2>Heading</h2>
-                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
+
+	<link href="{{asset('assets/css/home.css')}}" rel="stylesheet">
+		<link rel="stylesheet" href="{{asset('assets/css/home.css')}}">
+       
+<html>
+  <head>
+
+<ul>
+<div class = "navbar">
+		<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
+  <li><a href="{{ path('home') }}">Accueil</a></li>
+  <li><a href="{{ path('biographie') }} ">Biographie</a></li>
+  <li><a href="{{ path('gallery') }} ">Gallerie</a></li>
+  <li><a href="{{ path('products') }}">Boutique</a></li>
+  <li><a href="{{ path('cours') }}">Cours</a></li>
+  <li><a href="{{ path('exposition') }}">Exposition</a></li>
+  <li><a href="{{ path('contact') }}">Contact</a></li>
+  <li><a href="{{ path('app_login') }}">Connexion</a></li>
+  <li><a href="{{ path('register') }}">Inscription</a></li>
+  </div>
+</ul>
+
+    <style>
+     
+      .image {
+        background: url("/uploads/128928802_3449789141741548_8434449610011243469_n.jpg") no-repeat fixed;
+        background-position: center center;
+        background-size: cover;
+        min-height: 500px;
+      }
+      .content {
+        max-width: 1200px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+        height: 100%;
+      }
+    </style>
+  </head>
 
 
-        <!-- START THE FEATURETTES -->
 
-        <hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-            </div>
-        </div>
 
-        <hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-            </div>
-        </div>
 
-        <hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-            </div>
-        </div>
 
-        <hr class="featurette-divider">
 
-        <!-- /END THE FEATURETTES -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <body>
+    <div class="image"></div>
+    <section class="content">
+    <hr>
+      <h1>Bienvenue sur le site d'Antonin Fournet</h1>
+     <p>
+     </p>
+     <p>
+     </p>
+    <ul>
+      <p>	Antonin Fournet, née en octobre 2000. Artiste et étudiant en 4ème année aux Beaux-Arts de Tours, obtient sa licence en 2021. Il se focalise principalement sur le domaine de la peinture et de la sculpture. Il aime réutiliser des éléments plastiques et les modifier lors de la création de ses œuvres.
+				</p>
+				<p>
+					Aimant la vie ainsi que la biologie, il se questionne sur les enjeux environnementaux actuel et porte un discours écologique qu’il transmet dans son art. Il s'intéresse et spécule sur un monde futur comme nous le montre son essaie, écrit lors de sa 3ème année, racontant l'histoire d'un astronaute qui découvre une planète recouverte de plastique et où la biologie ainsi que cette dernière sont en symbiose, comme si ces deux éléments avaient muté pour coexister.
+				</p>
+				<p>
+					Étant un grand amateur de plante, il aime toute forme de vie, cela l'inspire beaucoup dans son travail. Il veut contribuer à sensibiliser les consciences par rapport aux enjeux environnementaux qui sont de plus en plus critique. Rêvant d'un monde où l'écologie évolue positivement, il vous invite avec générosité à découvrir son travail.
+				</p> </ul>
+
+
+    <ul>
+      <p>	Antonin Fournet, née en octobre 2000. Artiste et étudiant en 4ème année aux Beaux-Arts de Tours, obtient sa licence en 2021. Il se focalise principalement sur le domaine de la peinture et de la sculpture. Il aime réutiliser des éléments plastiques et les modifier lors de la création de ses œuvres.
+				</p>
+				<p>
+					Aimant la vie ainsi que la biologie, il se questionne sur les enjeux environnementaux actuel et porte un discours écologique qu’il transmet dans son art. Il s'intéresse et spécule sur un monde futur comme nous le montre son essaie, écrit lors de sa 3ème année, racontant l'histoire d'un astronaute qui découvre une planète recouverte de plastique et où la biologie ainsi que cette dernière sont en symbiose, comme si ces deux éléments avaient muté pour coexister.
+				</p>
+				<p>
+					Étant un grand amateur de plante, il aime toute forme de vie, cela l'inspire beaucoup dans son travail. Il veut contribuer à sensibiliser les consciences par rapport aux enjeux environnementaux qui sont de plus en plus critique. Rêvant d'un monde où l'écologie évolue positivement, il vous invite avec générosité à découvrir son travail.
+				</p> </ul>
+      </div>
+    </section>
+  </body>
+</html>
+
+
+
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!--Footer-->
+
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <script src="{{asset('assets/js/home.js')}}"></script>
+      <script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script>
+ <script src="{{asset('assets/js/antonin.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 {% endblock %}

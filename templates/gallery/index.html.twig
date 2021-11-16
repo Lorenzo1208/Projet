@@ -6,184 +6,80 @@
 
 <html>
 
-<header class="site-header">
+	<header class="site-header">
 
-   <link href="{{asset('assets/css/gallerie.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('assets/css/gallerie.css')}}">
-	<div class="container row">
+   		<link href="{{asset('assets/css/gallerie.css')}}" rel="stylesheet">
+    	<link rel="stylesheet" href="{{asset('assets/css/gallerie.css')}}">
+		
+
+
+
+<ul>
+<div class = "navbar">
+		<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
+  <li><a href="{{ path('home') }}">Accueil</a></li>
+  <li><a href="{{ path('biographie') }} ">Biographie</a></li>
+  <li><a href="{{ path('gallery') }} ">Gallerie</a></li>
+  <li><a href="{{ path('products') }}">Boutique</a></li>
+  <li><a href="{{ path('cours') }}">Cours</a></li>
+  <li><a href="{{ path('exposition') }}">Exposition</a></li>
+  <li><a href="{{ path('contact') }}">Contact</a></li>
+  <li><a href="{{ path('app_login') }}">Connexion</a></li>
+  <li><a href="{{ path('register') }}">Inscription</a></li>
+  </div>
+</ul>
+
 		<h1 class="site-brand">
-			<a href="#">La Gallerie</a>
+			<a href="#">La Gallerie - Antonin - Fournet</a>
 		</h1>
-		<nav class="site-nav">
-			<ul class="menu menu--main">
-				<li class="menu-item">
-					<a href="#" class="menu-link">Accueil</a>	
-				</li>
-				<li class="menu-item">
-					<a href="#" class="menu-link">Artiste</a>	
-				</li>
-				<li class="menu-item">
-					<a href="#" class="menu-link">Evenements</a>	
-				</li>
-				<li class="menu-item">
-					<a href="#" class="menu-link">Bio</a>	
-				</li>
-				<li class="menu-item">
-					<a href="#" class="menu-link">Contact</a>	
-				</li>
-			</ul>
-		</nav>
-	</div>
-</header>
+		</div>
 
-<main class="main-content">
-		
-	<header id="works" class="main-header container row">
-		<h2 class="page-title">Antonin Fournet</h2>
-		<nav class="page--sub-nav">
-			<ul class="menu menu--sub">
-				<li class="menu-item">
-					<a href="#works" class="menu-link">Artist Works</a>
-				</li>
-				<li class="menu-item">
-					<a href="#profile" class="menu-link">Artist Profile</a>
-				</li>
-			</ul>
-		</nav>
+
+<style>
+
+.grid-item {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  
+  padding: 10px;
+}
+
+</style>
 	</header>
-		
-	<section class="section artwork-grid container fadeIn">
-		<article class="artwork-item">
-			<span class="artwork--img">
-				<a href="#" class="artwork--link">
-					<img src="//source.unsplash.com/random/600x600/?abstract" alt="01" title="01">
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 01</a>
-					</li>
-					<li class="menu-item artwork--dimensions">80 x 60</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-		<article class="artwork-item">
-			<span class="artwork--img">
-				<a href="#" class="artwork--link">
-					<img src="//source.unsplash.com/random/600x800/?abstract" alt="02" title="02">
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 02</a>
-					</li>
-					<li class="menu-item artwork--dimensions">60 x 80</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-		<article class="artwork-item">
-			<span class="artwork--img">
-				<a href="#" class="artwork--link">
-					<img src="//source.unsplash.com/random/800x600/?abstract" alt="03" title="03">
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 03</a>
-					</li>
-					<li class="menu-item artwork--dimensions">80 x 60</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-		<article class="artwork-item">
-			<span class="artwork--img">
-				<a href="#" class="artwork--link">
-					<img src="//source.unsplash.com/random/600x800/?abstract" alt="04" title="04">
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 04</a>
-					</li>
-					<li class="menu-item artwork--dimensions">60 x 80</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-		<article class="artwork-item">
-			<span class="artwork--img">
-				<a href="#" class="artwork--link">
-					<img src="//source.unsplash.com/random/800x600/?abstract" alt="05" title="05">
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 05</a>
-					</li>
-					<li class="menu-item artwork--dimensions">80 x 60</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-		<article class="artwork-item">
-			<span class="artwork--img">
-				<a href="#" class="artwork--link">
-					<img src="//source.unsplash.com/random/600x800/?abstract" alt="06" title="06">
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 06</a>
-					</li>
-					<li class="menu-item artwork--dimensions">60 x 80</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-		<article class="artwork-item">
-			<span class="artwork--img">
-				<a href="#" class="artwork--link">
-					<img src="//source.unsplash.com/random/800x600/?abstract" alt="07" title="07">
-				</a>
-			</span>
-			<span class="artwork--content">
-				<ul class="menu">
-					<li class="menu-item artwork--title">
-						<a href="#" class="menu-link">Artwork Title 07</a>
-					</li>
-					<li class="menu-item artwork--dimensions">80 x 60</li>
-					<li class="menu-item artwork--value">2,600</li>
-				</ul>
-			</span>
-		</article>
-	</section>
 
-	<section id="profile" class="section container">
-		<div class="row">
-			<h3 class="section-title">Artist Profile</h3>
-		</div>
-		<div class="row">
-			<div class="col">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quia officia quaerat est illo, temporibus reprehenderit deleniti repellendus, facilis optio perspiciatis veritatis placeat doloremque voluptate accusantium eaque! Quasi, accusantium cupiditate!</p>
-			</div>
-			<div class="col">
-				<div id="statement">
-					<h4>Artist Statement</h4>
-				</div>
-				<div id="accomplishments">
-					<h4>Artist Accomplishements</h4>
-				</div>
-			</div>
-		</div>
-	</section>
-</main>
-{% endblock %}
+		<!--<div class="row">-->
+
+			
+
+								{% for products in product %}
+										
+
+
+
+
+<article class="artwork-item">
+			
+				
+									
+										<div class="hover13 column">
+											
+
+												<figure><a href="{{ path('products', { 'slug' : products.slug }) }}"><img src="/uploads/{{products.illustration}}" class="artwork--link" /> </a></figure>
+										
+										</div>
+
+
+</article>
+
+
+										
+											{% endfor %}
+											
+									<script src="{{asset('assets/js/gallerie.js')}}"></script>
+
+					
+
+		<!--</div>-->
+
+					{% endblock %}
