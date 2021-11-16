@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block content %}
-
-
+	<body></body>
+	<link rel="stylesheet" href="{{asset('assets/css/account.css')}}">
 	<ul>
 		<div class="navbar">
 			<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
@@ -38,14 +38,16 @@
 		</div>
 	</ul>
 	<h1>Mon compte</h1>
-	<p>
+	<header>
 		Bienvenue dans votre compte
-		{{app.user.firstname ~" "~app.user.lastname}}
-	</p>
+		<span style="font-weight:bold">
+			{{app.user.firstname ~" "~app.user.lastname}}
+		</span>
+	</header>
 	<hr>
 	<div class="contenu_compte">
-		<a href="{{ path('account_password') }}">-Modifier mon mot de passe</a>
-		<a href="{{ path('app_logout') }}">-Deconnexion</a>
+		<a href="{{ path('account_password') }}">Modifier mon mot de passe</a>
+		<a href="{{ path('app_logout') }}">Deconnexion</a>
 	</div>
 </br>
 <hr>{% endblock %}
