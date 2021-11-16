@@ -1,67 +1,82 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Se connecter{% endblock %}
+{% block title %}Se connecter
+{% endblock %}
 
 {% block content %}
 
+	<body></body>
+	<link href="{{asset('assets/css/login.css')}}" rel="stylesheet">
+	<link rel="stylesheet" href="{{asset('assets/css/login.css')}}">
 
-    <link href="{{asset('assets/css/login.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('assets/css/login.css')}}">
+	<ul>
+		<div class="navbar">
+			<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
+			<li>
+				<a href="{{ path('home') }}">Accueil</a>
+			</li>
 
-<ul>
-<div class = "navbar">
-		<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
-  <li><a href="{{ path('home') }}">Accueil</a></li>
-  
-  <li><a href="{{ path('gallery') }} ">Gallerie</a></li>
-  <li><a href="{{ path('products') }}">Boutique</a></li>
-  <li><a href="{{ path('cours') }}">Cours</a></li>
-  <li><a href="{{ path('exposition') }}">Exposition</a></li>
-  <li><a href="{{ path('contact') }}">Contact</a></li>
-  <li><a href="{{ path('app_login') }}">Connexion</a></li>
-  <li><a href="{{ path('register') }}">Inscription</a></li>
-  </div>
-</ul>
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
-
-    {% if app.user %}
-        <div class="mb-3">
-            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
-        </div>
-    {% endif %}
-<div class="login-reg-panel">
-<h1>Merci de vous connecter</h1>
-   {# <h1 class="h3 mb-3 font-weight-normal">Merci de vous connecter</h1>#}
-   <div class="white-panel">
-			<div class="login-show">
-    <label for="inputEmail">Votre email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="Votre email"required autofocus>
-    <label for="inputPassword">Votre mot de passe</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="Votre mot de passe" required>
-
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
-
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
-
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
-        </div>
-    #}
-<hr>
-    <button class="btn btn-lg btn-primary btn-sm" type="submit">
-        Se connecter
-    </button>
-</form>
-            <a class="c" href="" >Forgot password?</a>
+			<li>
+				<a href="{{ path('gallery') }} ">Gallerie</a>
+			</li>
+			<li>
+				<a href="{{ path('products') }}">Boutique</a>
+			</li>
+			<li>
+				<a href="{{ path('cours') }}">Cours</a>
+			</li>
+			<li>
+				<a href="{{ path('exposition') }}">Exposition</a>
+			</li>
+			<li>
+				<a href="{{ path('contact') }}">Contact</a>
+			</li>
+			<li>
+				<a href="{{ path('app_login') }}">Connexion</a>
+			</li>
+			<li>
+				<a href="{{ path('register') }}">Inscription</a>
+			</li>
 		</div>
-</div>
-{% endblock %}
+	</ul>
+
+	<form method="post">
+		{% if error %}
+			<div class="alert alert-danger">
+				{{ error.messageKey|trans(error.messageData, 'security') }}
+			</div>
+		{% endif %}
+
+		{% if app.user %}
+			<div class="mb-3">
+				You are logged in as
+				{{ app.user.username }},
+
+				<a href="{{ path('app_logout') }}">
+					Logout
+				</a>
+			</div>
+		{% endif %}
+		<div class="login-reg-panel">
+			<h1>
+				Merci de vous connecter
+			</h1>
+			{# <h1 class="h3 mb-3 font-weight-normal">Merci de vous connecter</h1>#}
+			<div class="white-panel">
+				<div class="login-show">
+					<label for="inputEmail">Votre email</label>
+					<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="Votre email" required autofocus>
+					<label for="inputPassword">Votre mot de passe</label>
+					<input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="Votre mot de passe" required>
+
+					<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+					<hr>
+					<button class="btn btn-lg btn-primary btn-sm" type="submit">
+						Se connecter
+					</button>
+				</form>
+				<a class="c" href="">Forgot password?</a>
+			</div>
+		</div>
+	{% endblock %}
