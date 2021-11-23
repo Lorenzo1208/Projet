@@ -16,6 +16,10 @@
 		<link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
 		<link rel="stylesheet" href="{{asset('assets/css/antonin.css')}}">
 
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
 	</head>
 
 	{% block navbar %}
@@ -58,16 +62,91 @@
 	{% endblock %}
 
 	{% block content %}{% endblock %}
-	<footer>
-		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+	
+		<div class="container"></div>
+<footer>
+  <!-- Footer main -->
+  <section class="ft-main">
+    <div class="ft-main-item">
+      <h2 class="ft-title">De plus :</h2>
+      <ul>
+       <li>
+					<a href="{{ path('home') }}">Accueil</a>
+				</li>
+				<li>
+					<a href="{{ path('gallery') }} ">Gallerie</a>
+				</li>
+				<li>
+					<a href="{{ path('products') }}">Boutique</a>
+				</li>
+				<li>
+					<a href="{{ path('exposition') }}">Exposition</a>
+				</li>
+				
+      </ul>
+    </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Mon compte :</h2>
+      <ul>
+       <li>
+					{% if app.user == null %}
+						<a href="{{ path('app_login') }}">Connexion</a>
+					{% endif %}
+					{% if app.user != null %}
+						<a href="{{ path('app_login') }}">
+							{{ app.user.lastname ~' '~ app.user.firstname}}
+						</a>
+					{% endif %}
+				</li>
+				<li>
+					<a href="{{ path('register') }}">Inscription</a>
+				</li>
+      </ul>
+    </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Contact :</h2>
+      <ul>
+        <li>
+					<a href="{{ path('cours') }}">Cours</a>
+				</li>
+				
+				<li>
+					<a href="{{ path('contact') }}">Contact</a>
+				</li>
+      </ul>
+    </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Restez à jour</h2>
+      <p>Inscrivez-vous à ma newsletter pour avoir les dernières oeuvres et informations.</p>
+      <form>
+        <input type="email" name="email" placeholder="Entrer votre adresse email">
+        <input type="submit" value="Souscrivez">
+      </form>
+    </div>
+  </section>
 
-			<a href="https://www.instagram.com/chupa1810/">
-				<img alt="Qries" src="/uploads/instagram-logo-24.png" width="" height=""></a>
+  <!-- Footer social -->
+  <section class="ft-social">
+    <ul class="ft-social-list">
+      <li><a href="https://www.facebook.com/antonin.fournet"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://www.instagram.com/chupa1810/"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="https://github.com/Lolo8021/Projet"><i class="fab fa-github"></i></a></li>
+      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+  </section>
 
-			: Instagram - © 2021 Copyright: Lorenzo
-		</div>
-		<!-- Copyright -->
-	</footer>
+  <!-- Footer legal -->
+  <section class="ft-legal">
+    <ul class="ft-legal-list">
+      <li><a href="#">Termes &amp; Conditions</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li>&copy; 2021 Copyright Lorenzo & Cie</li>
+    </ul>
+  </section>
+</footer>
+	
 
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
