@@ -43,3 +43,15 @@ a:hover:after {
 .row{
   margin: 5px;
 }
+
+footer{
+  background-color: #5c5c5c;
+  background-image: -webkit-linear-gradient(150deg, #818181 35%, #a0a0a0 35%);
+  min-height: 57px;
+}
+
+.text-center p-3{
+  background-color: #5c5c5c;
+  background-image: -webkit-linear-gradient(150deg, #818181 35%, #a0a0a0 35%);
+  min-height: 57px;
+}
