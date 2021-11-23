@@ -1,5 +1,3 @@
-$("#scroll-down").click(function() {
-    $('html, body').animate({
-        scrollTop: $(".timeline-wrapper").offset().top
-    }, 1500);
-  });
+$('html, body').animate({
+	scrollTop: $("#page-2").offset().top
+}, 15000);
