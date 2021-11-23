@@ -1,43 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{product.name}} Boutique {% endblock %}
+{% block title %}
+	{{product.name}}
+	Boutique
+{% endblock %}
 
 {% block content %}
 
 
-<ul>
-<div class = "navbar">
-		<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
-  <li><a href="{{ path('home') }}">Accueil</a></li>
-  
-  <li><a href="{{ path('gallery') }} ">Gallerie</a></li>
-  <li><a href="{{ path('products') }}">Boutique</a></li>
-  <li><a href="{{ path('cours') }}">Cours</a></li>
-  <li><a href="{{ path('exposition') }}">Exposition</a></li>
-  <li><a href="{{ path('contact') }}">Contact</a></li>
-  <li><a href="{{ path('app_login') }}">Connexion</a></li>
-  <li><a href="{{ path('register') }}">Inscription</a></li>
-  </div>
-</ul>
-<div class="row">
+	<div class="row">
 
-    <div class="col-md-5"></div>
-        <p class="flotte">
-        <img src="/uploads/{{ product.illustration}}" alt="{{product.name}}"  width="400" height="400" class="img-fluid"float="left">
-        </p>
-     </div>
+		<div class="col-md-5"></div>
+		<p class="flotte">
+			<img src="/uploads/{{ product.illustration}}" alt="{{product.name}}" width="400" height="400" class="img-fluid" float="left">
+		</p>
+	</div>
 
-    <div class="col-md-7 my-auto"></div>
+	<div class="col-md-7 my-auto"></div>
 
-        <h3>{{product.name}}</h3>
-        <p>{{product.subtitle}}</p>
-        <span class="product-page-price">{{ (product.price/100) | number_format(2, ',', '.') }} €</span>
-        <hr>
-        <p>
-        {{product.description}}
-        </p>
-        <a href="" class="btn btn-primary">Ajouter au panier</a>
+	<h3>{{product.name}}</h3>
+	<p>{{product.subtitle}}</p>
+	<span class="product-page-price">{{ (product.price/100) | number_format(2, ',', '.') }}
+		€</span>
+	<hr>
+	<p>
+		{{product.description}}
+	</p>
+	<a href="" class="btn btn-primary">Ajouter au panier</a>
 
-    </div>
-
-{% endblock %}
+</div>{% endblock %}

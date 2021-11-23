@@ -1,47 +1,41 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Les Cours{% endblock %}
+{% block title %}
+	Les Cours - Antonin Fournet
+{% endblock %}
 
 {% block content %}
-<head>
-<script src="cours.js"></script>
-   <link href="{{asset('assets/css/cours.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('assets/css/cours.css')}}">
-   
-  
+	<head>
+		<script src="cours.js"></script>
+		<link href="{{asset('assets/css/cours.css')}}" rel="stylesheet">
+		<link rel="stylesheet" href="{{asset('assets/css/cours.css')}}">
 
-<ul>
-<div class = "navbar">
-		<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
-  <li><a href="{{ path('home') }}">Accueil</a></li>
-  
-  <li><a href="{{ path('gallery') }} ">Gallerie</a></li>
-  <li><a href="{{ path('products') }}">Boutique</a></li>
-  <li><a href="{{ path('cours') }}">Cours</a></li>
-  <li><a href="{{ path('exposition') }}">Exposition</a></li>
-  <li><a href="{{ path('contact') }}">Contact</a></li>
-  <li><a href="{{ path('app_login') }}">Connexion</a></li>
-  <li><a href="{{ path('register') }}">Inscription</a></li>
-  </div>
-</ul> 
-</head>
 
-<body>
-  <h2>Demander un cours:</h2>
-  <div id="Appointment-Calendar">
-    <form>
-      Nom complet:
-      <input type="text" name="title" placeholder="Entrer votre nom complet (ex: John Doe)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Full name (e.g: John Doe)'" /> Date:
-      <input id="datePicker" type="date" name="date" value="" /> Heure de début:
-      <input type="time" name="startTime" value="Start" /> Heure de fin:
-      <input type="time" name="endTime" value="End" /> Email:
-      <input type="email" name="email" placeholder="Johndoe@gmail.co.uk" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Johndoe@gmail.co.uk'" /> Description:
-      <br>
-      <textarea name="details" form="form" placeholder="Description goes here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Description goes here'"></textarea><br>
-      <input type="submit" id="submit-button" value="Demander un cours">
-    </form>
-  </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-  <script src="script.js"></script>
-</body>
+	</head>
+
+	<body>
+		<h2>
+			Demander un cours:
+		</h2>
+		<div id="Appointment-Calendar">
+			<form>
+				Nom complet:
+				<input type="text" name="title" placeholder="Entrer votre nom complet (ex: John Doe)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Full name (e.g: John Doe)'"/>
+				Date:
+				<input id="datePicker" type="date" name="date" value=""/>
+				Heure de début:
+				<input type="time" name="startTime" value="Start"/>
+				Heure de fin:
+				<input type="time" name="endTime" value="End"/>
+				Email:
+				<input type="email" name="email" placeholder="Johndoe@gmail.co.uk" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Johndoe@gmail.co.uk'"/>
+				Description:
+				<br>
+				<textarea name="details" form="form" placeholder="Description goes here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Description goes here'"></textarea><br>
+				<input type="submit" id="submit-button" value="Demander un cours">
+			</form>
+		</div>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+		<script src="script.js"></script>
+	</body>
 {% endblock %}
