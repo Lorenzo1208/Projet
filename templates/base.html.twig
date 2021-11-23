@@ -1,43 +1,71 @@
 <!doctype html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <title>{% block title %}Antonin Fournet{% endblock %}</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<title>
+			{% block title %}
+				Antonin Fournet
+			{% endblock %}
+		</title>
 
-    <!-- Bootstrap & CSS -->
-    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('assets/css/antonin.css')}}">
-    
+		<!-- Bootstrap & CSS -->
+		<link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+		<link rel="stylesheet" href="{{asset('assets/css/antonin.css')}}">
 
-		
+	</head>
+
+	{% block navbar %}
+		<ul>
+			<div class="navbar">
+				<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
+				<li>
+					<a href="{{ path('home') }}">Accccueil</a>
+				</li>
+				<li>
+					<a href="{{ path('gallery') }} ">Gallerie</a>
+				</li>
+				<li>
+					<a href="{{ path('products') }}">Boutique</a>
+				</li>
+				<li>
+					<a href="{{ path('cours') }}">Cours</a>
+				</li>
+				<li>
+					<a href="{{ path('exposition') }}">Exposition</a>
+				</li>
+				<li>
+					<a href="{{ path('contact') }}">Contact</a>
+				</li>
+				<li>
+					<a href="{{ path('app_login') }}">Connexion</a>
+				</li>
+				<li>
+					<a href="{{ path('register') }}">Inscription</a>
+				</li>
+			</div>
+		</ul>
+	{% endblock %}
+
+	{% block content %}{% endblock %}
+	<footer>
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+
+			<a href="https://www.instagram.com/chupa1810/">
+				<img alt="Qries" src="/uploads/instagram-logo-24.png" width="" height=""></a>
+
+			: Instagram - © 2021 Copyright: Lorenzo
+		</div>
+		<!-- Copyright -->
+	</footer>
 
 
-{% block content %}
-
-
-
-{% endblock %}
-<footer>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-
-         <a href="https://www.instagram.com/chupa1810/">
-         <img alt="Qries" src="/uploads/instagram-logo-24.png"
-         width="" height=""></a>
-    
-        : Instagram - © 2021 Copyright: Lorenzo
-    </div>
-    <!-- Copyright -->
-</footer>
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script>
-<script src="{{asset('assets/js/antonin.js')}}"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-   
- 
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script>
+	<script src="{{asset('assets/js/antonin.js')}}"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>

@@ -1,69 +1,38 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Gallerie{% endblock %}
+{% block title %}
+	Gallerie
+{% endblock %}
 
 {% block content %}
 
-<html>
+	<html>
+		<h1 class="site-brand">
+			<a href="#">La Gallerie - Antonin - Fournet</a>
+		</h1>
+	</html>
 
-    <header class="site-header">
-
-           <link href="{{asset('assets/css/gallerie.css')}}" rel="stylesheet">
-
-
-
-
-
-<ul>
-<div class = "navbar">
-        <img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
-  <li><a href="{{ path('home') }}">Accueil</a></li>
-  <li><a href="{{ path('gallery') }} ">Gallerie</a></li>
-  <li><a href="{{ path('products') }}">Boutique</a></li>
-  <li><a href="{{ path('cours') }}">Cours</a></li>
-  <li><a href="{{ path('exposition') }}">Exposition</a></li>
-  <li><a href="{{ path('contact') }}">Contact</a></li>
-  <li><a href="{{ path('app_login') }}">Connexion</a></li>
-  <li><a href="{{ path('register') }}">Inscription</a></li>
-  </div>
-</ul>
-
-        <h1 class="site-brand">
-            <a href="#">La Gallerie - Antonin - Fournet</a>
-        </h1>
-        </div>
+	<div class="row">
 
 
-<style>
+		{% for products in product %}
+
+			<article class="marginauto">
+
+				<div class="marginau">
+
+					<figure>
+						<a href="{{ path('products', { 'slug' : products.slug }) }}">
+							<img class="marginau" src="/uploads/{{products.illustration}}" width="300px" height="200px" alt="centered image"/>
+						</a>
+					</figure>
+
+				</div>
 
 
-</style>
-    </header>
+			</article>
+		{% endfor %}
 
-        <div class="row">
-
-
-
-                                {% for products in product %}
-
-<article class="marginauto">
-
-                                        <div class="marginau">
-
-
-                                                <figure><a href="{{ path('products', { 'slug' : products.slug }) }}" >
-                                                <img class="marginau" src="/uploads/{{products.illustration}}" width=300px height=200px alt="centered image"/> </a></figure>
-
-                                        </div>
-
-
-</article>
-                                           {% endfor %}
-
-                                    <script src="{{asset('assets/js/gallerie.js')}}"></script>
-
-
-
-        </div>
-
-                    {% endblock %}
+		<script src="{{asset('assets/js/gallerie.js')}}"></script>
+	</div>
+{% endblock %}
