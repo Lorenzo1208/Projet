@@ -11,6 +11,8 @@
 		</head>
 		<body>
 
+
+
 			<div class="container">
 				<div class="container-inner">
 					<div class="main-content">
@@ -27,8 +29,8 @@
 								<p>"Pas d'art sans création, pas d'art sans émotion."</p>
 
 							</div>
-
-							<a href="#image" class="link" onclick="readMore()">En apprendre plus ...</a>
+	
+							<a id="scroll-down" href="#page-2" onclick="readMore()">En apprendre plus ...</a>
 						</div>
 
 
@@ -64,24 +66,20 @@
   <div id="scroll-title">
     Scroll
   </div>
- <div id="scroll-down">
+ <div id="scroll-down1">
 </div>
   </div>
   </div>
 <!--original codepen https://codepen.io/paschka -->
 
-<ul class="menu">
-	<li><a class="js-scrollTo" href="#image"></a></li>
-</ul>
-
-<div id="image">
-	<!-- Contenu Page 1 -->
-</div><!-- /page-1 -->
-
 
 			<hr>
 		</body>
 		<body>
+		
+<div id="page-2">
+	<!-- Contenu Page 2 -->
+
 			<div class="image"></div>
 			<section class="content">
 				<hr>
@@ -113,6 +111,7 @@
 					</p>
 				</ul>
 			</div>
+			</div><!-- /page-2 -->
 		</body>
 	</html>
 </section></body></html><!-- Copyright --><!--Footer--><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="{{asset('assets/js/home.js')}}"></script><script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script><script src="{{asset('assets/js/antonin.js')}}"></script>{% endblock %}
