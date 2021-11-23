@@ -1,7 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Mon compte - Antonin Fournet
+	Mon compte -
+	{{ app.user.lastname ~ ' ' ~  app.user.firstname}}
 {% endblock %}
 
 {% block content %}
