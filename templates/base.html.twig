@@ -23,7 +23,7 @@
 			<div class="navbar">
 				<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
 				<li>
-					<a href="{{ path('home') }}">Accccueil</a>
+					<a href="{{ path('home') }}">Accueil</a>
 				</li>
 				<li>
 					<a href="{{ path('gallery') }} ">Gallerie</a>
@@ -41,7 +41,14 @@
 					<a href="{{ path('contact') }}">Contact</a>
 				</li>
 				<li>
-					<a href="{{ path('app_login') }}">Connexion</a>
+					{% if app.user == null %}
+						<a href="{{ path('app_login') }}">Connexion</a>
+					{% endif %}
+					{% if app.user != null %}
+						<a href="{{ path('app_login') }}">
+							{{ app.user.lastname ~' '~ app.user.firstname}}
+						</a>
+					{% endif %}
 				</li>
 				<li>
 					<a href="{{ path('register') }}">Inscription</a>
