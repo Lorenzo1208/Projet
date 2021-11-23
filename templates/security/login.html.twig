@@ -27,26 +27,36 @@
 				</a>
 			</div>
 		{% endif %}
-		<div class="login-reg-panel">
-			<h1>
-				Merci de vous connecter
-			</h1>
-			{# <h1 class="h3 mb-3 font-weight-normal">Merci de vous connecter</h1>#}
-			<div class="white-panel">
-				<div class="login-show">
-					<label for="inputEmail">Votre email</label>
-					<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="Votre email" required autofocus>
-					<label for="inputPassword">Votre mot de passe</label>
-					<input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="Votre mot de passe" required>
 
-					<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-					<hr>
-					<button class="btn btn-lg btn-primary btn-sm" type="submit">
-						Se connecter
-					</button>
-				</form>
-				<a class="c" href="">Forgot password?</a>
-			</div>
-		</div>
+
+	<div class="login-box">
+	
+		<h2>Se connecter</h2>
+
+  		<form>
+    	
+		<div class="user-box">
+      		<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="" required autofocus>
+			<label>Email</label>
+    	</div>
+
+    	<div class="user-box">
+      		<input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="" required>
+			<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+			<label>Mot de passe</label>
+    	</div>
+
+    		<hr>
+				<button class="btn btn-lg btn-primary btn-sm" type="submit">
+					Se connecter
+				</button>
+
+			<a class="c" href="">Mot de passe oublié ?</a>
+
+  		</form>
+	</div>
+
+
+
 	{% endblock %}
