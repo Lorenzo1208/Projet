@@ -19,42 +19,45 @@
 	</head>
 
 	{% block navbar %}
-		<ul>
-			<div class="navbar">
-				<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
-				<li>
-					<a href="{{ path('home') }}">Accueil</a>
-				</li>
-				<li>
-					<a href="{{ path('gallery') }} ">Gallerie</a>
-				</li>
-				<li>
-					<a href="{{ path('products') }}">Boutique</a>
-				</li>
-				<li>
-					<a href="{{ path('cours') }}">Cours</a>
-				</li>
-				<li>
-					<a href="{{ path('exposition') }}">Exposition</a>
-				</li>
-				<li>
-					<a href="{{ path('contact') }}">Contact</a>
-				</li>
-				<li>
-					{% if app.user == null %}
-						<a href="{{ path('app_login') }}">Connexion</a>
-					{% endif %}
-					{% if app.user != null %}
-						<a href="{{ path('app_login') }}">
-							{{ app.user.lastname ~' '~ app.user.firstname}}
-						</a>
-					{% endif %}
-				</li>
-				<li>
-					<a href="{{ path('register') }}">Inscription</a>
-				</li>
-			</div>
-		</ul>
+		<header>
+			<ul>
+				<div class="navbar">
+					<img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="4%">
+					<li>
+						<a href="{{ path('home') }}">Accueil</a>
+					</li>
+					<li>
+						<a href="{{ path('gallery') }} ">Gallerie</a>
+					</li>
+					<li>
+						<a href="{{ path('products') }}">Boutique</a>
+					</li>
+					<li>
+						<a href="{{ path('cours') }}">Cours</a>
+					</li>
+					<li>
+						<a href="{{ path('exposition') }}">Exposition</a>
+					</li>
+					<li>
+						<a href="{{ path('contact') }}">Contact</a>
+					</li>
+					<li>
+						{% if app.user == null %}
+							<a href="{{ path('app_login') }}">Connexion</a>
+						{% endif %}
+
+						{% if app.user != null %}
+							<a href="{{ path('app_login') }}">
+								{{ app.user.lastname ~' '~ app.user.firstname}}
+							</a>
+						{% endif %}
+					</li>
+					<li>
+						<a href="{{ path('register') }}">Inscription</a>
+					</li>
+				</div>
+			</ul>
+		</header>
 	{% endblock %}
 
 	{% block content %}{% endblock %}
