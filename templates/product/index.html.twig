@@ -1,32 +1,71 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}
-	Boutique - Antonin Fournet
+{% block title %}Boutique - Antonin Fournet
 {% endblock %}
 
 {% block content %}
 	<html>
+
 		<header class="site-header">
+
 
 			<link href="{{asset('assets/css/boutique.css')}}" rel="stylesheet">
 			<link rel="stylesheet" href="{{asset('assets/css/boutique.css')}}">
 
 			<div class="container row">
 				<h1 class="site-brand">
-					<a href="#">
-						La Boutique - Antonin Fournet
-					</a>
+					<a href="#">La Boutique - Antonin Fournet</a>
 				</h1>
+
 			</div>
+
+			<style>
+
+
+				figure {
+
+					margin: 0;
+					padding: 0;
+					background: #fff;
+					overflow: hidden;
+				}
+				figure:hover+span {
+					bottom: -36px;
+					opacity: 1;
+				}
+
+
+				/* Flashing */
+				.hover13 figure:hover img {
+					opacity: 1;
+					-webkit-animation: flash 1.5s;
+					animation: flash 1.5s;
+				}
+				@-webkit-keyframes flash {
+					0% {
+						opacity: .4;
+					}
+					100% {
+						opacity: 1;
+					}
+				}
+				@keyframes flash {
+					0% {
+						opacity: .4;
+					}
+					100% {
+						opacity: 1;
+					}
+				}
+			</style>
+
 		</header>
 
 		<div class="row">
 
 			<div class="col-md-2">
 
-				<h5>
-					FILTRER
-				</h5>
+				<h5>FILTRER</h5>
 				{{form(form)}}
 
 				</div>
