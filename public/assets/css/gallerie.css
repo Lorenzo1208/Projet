@@ -4,19 +4,15 @@
 
 
 .marginau {
-    margin: 20px auto 20px;
-    display: block;
-}
-.marginauto {
-	margin: 10px 0px 10px;
-	margin-left: 10px;
-    display: block;
+    
+    display: flex;
+	flex-wrap: wrap;
+	gap: 2em;
 }
 
+/*
 figure {
 	
-	margin: 0;
-	padding: 0;
 	background: #fff;
 	overflow: hidden;
 }
@@ -48,7 +44,7 @@ figure:hover+span {
 }
 
 
-
+*/
 
 
 

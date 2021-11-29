@@ -10,29 +10,36 @@
 		<h1 class="site-brand">
 			<a href="#">La Gallerie - Antonin - Fournet</a>
 		</h1>
-	</html>
+	
+	<link href="{{asset('assets/css/gallerie.css')}}" rel="stylesheet">
+			<link rel="stylesheet" href="{{asset('assets/css/gallerie.css')}}">
 
-	<div class="row">
+	
 
+<div class="marginau">
 
+<div class="hover13 column">
 		{% for products in product %}
 
-			<article class="marginauto">
+			
 
-				<div class="marginau">
-
-					<figure>
+				
 						<a href="{{ path('products', { 'slug' : products.slug }) }}">
-							<img class="marginau" src="/uploads/{{products.illustration}}" width="300px" height="200px" alt="centered image"/>
+							<img class="marginau" src="/uploads/{{products.illustration}}" width="300px" height="200px"/>
 						</a>
-					</figure>
+					
 
-				</div>
+				
 
 
-			</article>
 		{% endfor %}
+	
+		</div>
 
+</div>
+	
 		<script src="{{asset('assets/js/gallerie.js')}}"></script>
-	</div>
+	
+	</html>
+
 {% endblock %}
