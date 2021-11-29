@@ -6,170 +6,152 @@
 
 {% block content %}
 
-	<body></body>
+	<body>
 	<script src="contact.js"></script>
 	<link href="{{asset('assets/css/contact.css')}}" rel="stylesheet">
 	<link rel="stylesheet" href="{{asset('assets/css/contact.css')}}">
 </head>
-<div class="container">
-
-	<form class="well form-horizontal" action=" " method="post" id="contact_form">
-		<fieldset>
-
-			<!-- Form Name -->
-			<legend>Contactez nous!</legend>
-
-			<!-- Text input-->
-
-			<div class="form-group">
-				<label class="col-md-4 control-label">Prénom</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-user"></i>
-						</span>
 
 
-						<input name="first_name" value=" {% if app.user == null %} Prénom {% else %} {{app.user.firstname}} {% endif %}" class="form-control" type="text">
 
-					</div>
-				</div>
-			</div>
+<div class="container-contact">
 
-			<!-- Text input-->
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
 
-			<div class="form-group">
-				<label class="col-md-4 control-label">Nom</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-user"></i>
-						</span>
-						<input name="last_name" value="{% if app.user == null %} Nom {% else %} {{app.user.lastname}} {% endif %} " class=" form-control" type=" text">
-					</div>
-				</div>
-			</div>
+<!-- Form Name -->
+<legend>Contactez-moi !</legend>
 
-			<!-- Text input-->
-			<div class="form-group">
-				<label class="col-md-4 control-label">E-Mail</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-envelope"></i>
-						</span>
-						<input name="email" value="{% if app.user == null %} Email {% else %} {{app.user.email}} {% endif %} " class="form-control" type="text">
-					</div>
-				</div>
-			</div>
+<!-- Text input-->
 
+<div class="form-group">
+  <label class="col-md-4 control-label">Prénom</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="Prénom" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
 
-			<!-- Text input-->
+<!-- Text input-->
 
-			<div class="form-group">
-				<label class="col-md-4 control-label">Numéro</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-earphone"></i>
-						</span>
-						<input name="phone" value="{% if app.user == null %} num. telephone {% else %} {{app.user.phone}} {% endif %} " class="form-control" type="text">
-					</div>
-				</div>
-			</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" >Nom</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="last_name" placeholder="Nom" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
 
-			<!-- Text input-->
-
-			<div class="form-group">
-				<label class="col-md-4 control-label">Addresse</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-home"></i>
-						</span>
-						<input name="address" placeholder="Addresse" class="form-control" type="text">
-					</div>
-				</div>
-			</div>
-
-			<!-- Text input-->
-
-			<div class="form-group">
-				<label class="col-md-4 control-label">Ville</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-home"></i>
-						</span>
-						<input name="city" placeholder="Ville" class="form-control" type="text">
-					</div>
-				</div>
-			</div>
-
-			<!-- Select Basic -->
-
-			<div class="form-group">
-				<label class="col-md-4 control-label">Pays</label>
-				<div class="col-md-4 selectContainer">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-list"></i>
-						</span>
-						<select name="state" class="form-control selectpicker">
-							<option value=" ">Selectionner votre pays</option>
-							<option>France</option>
-							<option>Royaume-Unie</option>
-							<option>Allemagne</option>
-							<option>Italie</option>
-							<option>Espagne</option>
-							<option>Belgique</option>
-						</select>
-					</div>
-				</div>
-			</div>
-
-			<!-- Text input-->
-
-			<div class="form-group">
-				<label class="col-md-4 control-label">Code postal</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-home"></i>
-						</span>
-						<input name="zip" placeholder="Code postal" class="form-control" type="text">
-					</div>
-				</div>
-			</div>
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
 
 
-			<div class="form-group">
-				<label class="col-md-4 control-label">Description</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-pencil"></i>
-						</span>
-						<textarea class="form-control" name="comment" placeholder="Description"></textarea>
-					</div>
-				</div>
-			</div>
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Numéro de téléphone</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="Numéro" class="form-control" type="text">
+    </div>
+  </div>
+</div>
 
-			<!-- Success message -->
-			<div class="alert alert-success" role="alert" id="success_message">Success
-				<i class="glyphicon glyphicon-thumbs-up"></i>
-				Thanks for contacting us, we will get back to you shortly.</div>
+<!-- Text input-->
+      
+<div class="form-group">
+  <label class="col-md-4 control-label">Addresse</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="address" placeholder="Addresse" class="form-control" type="text">
+    </div>
+  </div>
+</div>
 
-			<!-- Button -->
-			<div class="form-group">
-				<label class="col-md-4 control-label"></label>
-				<div class="col-md-4">
-					<button type="submit" class="btn btn-warning">Envoyer
-						<span class="glyphicon glyphicon-send"></span>
-					</button>
-				</div>
-			</div>
+<!-- Text input-->
+ 
+<div class="form-group">
+  <label class="col-md-4 control-label">Ville</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="city" placeholder="ville" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
 
-		</fieldset>
-	</form>
-</div></div><!-- /.container -->{% endblock %}
+<!-- Select Basic -->
+   
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Pays</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="state" class="form-control selectpicker" >
+      <option value=" " >Selectionnez votre pays</option>
+      <option>Belgique</option>
+      <option>Espagne</option>
+      <option>France</option>
+      <option>Italie</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Code postal</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="zip" placeholder="Code postal" class="form-control"  type="text">
+    </div>
+</div>
+</div>
+
+<!-- Text area -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">Message</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+        	<textarea class="form-control" name="comment" placeholder="Message"></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Envoyer <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+
+</fieldset>
+</form>
+<!-- /.container -->
+</body>
+
+
+{% endblock %}
