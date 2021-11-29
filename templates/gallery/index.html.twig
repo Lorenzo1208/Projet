@@ -7,25 +7,28 @@
 {% block content %}
 
 	<html>
+	<head>
 		<h1 class="site-brand">
 			<a href="#">La Gallerie - Antonin - Fournet</a>
 		</h1>
 	
-	<link href="{{asset('assets/css/gallerie.css')}}" rel="stylesheet">
+	
 			<link rel="stylesheet" href="{{asset('assets/css/gallerie.css')}}">
 
-	
+	</head>
+	<body>
 
-<div class="marginau">
+<div class="img-gallery">
 
 <div class="hover13 column">
+
 		{% for product in product %}
 
 			
 
 				
-						<a href="{{ path('products', { 'slug' : product.slug }) }}">
-							<img class="marginau" src="/uploads/{{product.illustration}}" width="300px" height="200px"/>
+						<a href="{{ path('product', { 'slug' : product.slug }) }}">
+							<img src="/uploads/{{product.illustration}}"width="300px" height="200px" />
 						</a>
 					
 
@@ -41,5 +44,5 @@
 		<script src="{{asset('assets/js/gallerie.js')}}"></script>
 	
 	</html>
-
+</body>
 {% endblock %}
