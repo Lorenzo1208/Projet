@@ -19,13 +19,13 @@
 <div class="marginau">
 
 <div class="hover13 column">
-		{% for products in product %}
+		{% for product in product %}
 
 			
 
 				
-						<a href="{{ path('products', { 'slug' : products.slug }) }}">
-							<img class="marginau" src="/uploads/{{products.illustration}}" width="300px" height="200px"/>
+						<a href="{{ path('products', { 'slug' : product.slug }) }}">
+							<img class="marginau" src="/uploads/{{product.illustration}}" width="300px" height="200px"/>
 						</a>
 					
 
