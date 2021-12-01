@@ -18,6 +18,9 @@
 	</header>
 	<hr>
 	<div class="contenu_compte">
+	{% if is_granted('ROLE_ADMIN')%}
+		<a href="/admin">Vous êtes un administrateur</a>
+		{% endif %}
 		<a href="{{ path('account_password') }}">Modifier mon mot de passe</a>
 		<a href="{{ path('app_logout') }}">Deconnexion</a>
 	</div>
