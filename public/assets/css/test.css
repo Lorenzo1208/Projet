@@ -17,4 +17,12 @@
 	 margin-top: -40px;
 	 margin-left: -227px;
 }
- 
+
+.ft-legal{
+	padding-bottom: -30px;
+	margin-bottom: -30px;
+}
+
+.ft-legal li{
+	font-size: 10px;
+}
