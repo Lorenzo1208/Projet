@@ -1,0 +1,28 @@
+form {
+	padding-left: 50px;
+}
+
+h1 {
+	padding-left: 100px;
+}
+
+h2 {
+	padding-left: 100px;
+}
+
+p {
+	padding-left: 100px;
+}
+
+.form-group{
+	width: 350px;
+}
+
+h1{
+	margin-bottom: 25px;
+}
+
+.login-show{
+	font-size: 12px;
+	margin-left: 14px;
+}

@@ -2,7 +2,12 @@
 
 {% block title %}Nous contacter - La Boutique Française{% endblock %}
 
+
+
 {% block content %}
+
+		<link href="{{asset('assets/css/contact.css')}}" rel="stylesheet">
+		<link rel="stylesheet" href="{{asset('assets/css/contact.css')}}">
     <h2>Nous contacter</h2>
     <p>N'hésitez pas à prendre contact avec notre équipe, nous vous répondrons dans les meilleurs délais.</p>
     {% for message in app.flashes('notice') %}

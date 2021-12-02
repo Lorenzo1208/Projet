@@ -1,5 +1,9 @@
-*{
-	padding-left: 10px;
+form {
+	padding-left: 50px;
+}
+
+h1 {
+	padding-left: 100px;
 }
 
 .form-group{
