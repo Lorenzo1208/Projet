@@ -10,10 +10,17 @@
 		<link href="{{asset('assets/css/exposition.css')}}" rel="stylesheet">
 		<link rel="stylesheet" href="{{asset('assets/css/exposition.css')}}">
 	</head>
+<body>
+<h1>Exposition</h1>
 
-	<div class="header2"><video autoplay muted loop ><source src="{{ asset('assets/img/video.mp4') }}" </video>
-	
-		
+
+<div align="center"><a class="twitter-timeline" data-width="200" data-dnt="true"  data-tweet-limit="2" href="https://twitter.com/PacProvence?ref_src=twsrc%5Etfw">Tweets by PacProvence</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+
+
+	<div class="vid"><video width="600" height="500" autoplay muted loop ><source src="{{ asset('assets/img/video.mp4') }}" </video>
 		</div>
-
+</body>
 {% endblock %}
