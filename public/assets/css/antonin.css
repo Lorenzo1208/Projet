@@ -131,11 +131,7 @@ form {
   display: flex;
   flex-wrap: wrap;
 }
-input[type="email"] {
-  border: 0;
-  padding: 0.625rem;
-  margin-top: 0.3125rem;
-}
+
 input[type="submit"] {
   background-color: #2c2a81;
   color: #fff;
