@@ -4,22 +4,28 @@
 {% endblock %}
 {% block content %}
 
-	<h1>
-		Inscription
-	</h1>
-
 	<link href="{{asset('assets/css/register.css')}}" rel="stylesheet">
 	<link rel="stylesheet" href="{{asset('assets/css/register.css')}}">
 
 
 	<body>
+	<h1>
+		
+	</h1>
+	<div class="login-box">
+		<h2>
+		Inscription
+		</h2>
 		<p>
 			{{form(form)}}
 			</p>
+	
 			<div class="login-show">
 				<a href="/connexion">Déjà un compte ?</a>
 			</div>
 		</p>
+	</div>
+	
 	</body>
 
 {% endblock %}
