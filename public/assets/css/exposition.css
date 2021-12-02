@@ -1,11 +1,4 @@
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0
-}
+
 
 .main {
   display: flex;
@@ -19,12 +12,6 @@ body {
   height: 100%;
 }
 
-.vid {
- 
-  width: 100%;
-  height: 56.25%;
-  margin-top: 21.875%;
-}
 
 h1 {
   padding-top: 20px;
