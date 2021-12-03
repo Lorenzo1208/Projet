@@ -57,14 +57,14 @@
             <hr>
             <strong>Total : </strong> {{ ((total / 100) + (carrier.price / 100))|number_format(2, ',', '.') }} €
 
-            <a class="btn btn-success btn-block mt-3" id="checkout-button">Payer | {{ ((total / 100) + (carrier.price / 100))|number_format(2, ',', '.') }} €</a>
+            <a class="btn btn-success btn-block mt-3" id="checkout-button">Payer  {{ ((total / 100) + (carrier.price / 100))|number_format(2, ',', '.') }} €</a>
         </div>
     </div>
 {% endblock %}
 
 {% block script %}
     <script type="text/javascript">
-        var stripe = Stripe("pk_test_51HWz8KGVnm98Up5GSk7E17U0T8CkgdGhfLXRCHPk5TVd17Osiws7rQWwvHqXOvzb7pcvqxtwGp7RZD0KHfvlTLSO00ija4VIMh");
+        var stripe = Stripe("pk_test_51K2jjhC1lN0QW6loqkwfmPmAqSCXLpHMvfpHfPizEFFVlu46oOAVfxiFnVVDRUPReQ9LmpRN7Qnym1kLmqldJu4B00dfb73XtU");
         var checkoutButton = document.getElementById("checkout-button");
         checkoutButton.addEventListener("click", function () {
                 fetch("/commande/create-session/{{ reference }}", {

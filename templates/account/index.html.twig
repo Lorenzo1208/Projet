@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-	<body></body>
+	<body>
 	<link rel="stylesheet" href="{{asset('assets/css/account.css')}}">
 
 	<h1>Mon compte</h1>
@@ -28,7 +28,7 @@
 		<a href="{{ path('account_password') }}">Modifier mon mot de passe</a>
 		</li>
 		<li>
-
+<img src="{{ asset('assets/img/address-book.png') }}" alt="Gérer mes adresses"><br/>
                 <a href="{{ path('account_order') }}">Mes commandes</a>
           
 		</li>
@@ -40,8 +40,9 @@
 		</li>
 
 		<li>
-		<a href="{{ path('app_logout') }}">Deconnexion</a>
+		<a href="{{ path('app_logout') }}">Déconnexion</a>
 	</li>
 	</div>
 </br>
+</body>
 <hr>{% endblock %}
