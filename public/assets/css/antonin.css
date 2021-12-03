@@ -98,7 +98,7 @@ a:hover {
 }
 /* Sticks footer to bottom */
 body {
-  display: flex;
+  display: flex;/*a voir */
   min-height: 100vh;
   flex-direction: column;
 }

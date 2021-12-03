@@ -17,12 +17,31 @@
 		</span>
 	</header>
 	<hr>
+
 	<div class="contenu_compte">
+	<li>
 	{% if is_granted('ROLE_ADMIN')%}
 		<a href="/admin">Vous êtes un administrateur</a>
 		{% endif %}
+		</li>
+		<li>
 		<a href="{{ path('account_password') }}">Modifier mon mot de passe</a>
+		</li>
+		<li>
+
+                <a href="{{ path('account_order') }}">Mes commandes</a>
+          
+		</li>
+
+		<li>
+  
+                <a href="{{ path('account_address') }}">Gérer mes adresses</a>
+            
+		</li>
+
+		<li>
 		<a href="{{ path('app_logout') }}">Deconnexion</a>
+	</li>
 	</div>
 </br>
 <hr>{% endblock %}
