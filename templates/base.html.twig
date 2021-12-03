@@ -25,143 +25,150 @@
 		<header>
 			<ul>
 				<div class="navbar">
-					 <a href="{{ path('home') }}"><img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="50px">
-					<li>
-						<a href="{{ path('home') }}">Accueil</a>
-					</li>
-					<li>
-						<a href="{{ path('gallery') }} ">Gallerie</a>
-					</li>
-					<li>
-						<a href="{{ path('products') }}">Boutique</a>
-					</li>
-					<li>
-						<a href="{{ path('cours') }}">Cours</a>
-					</li>
-					<li>
-						<a href="{{ path('exposition') }}">Exposition</a>
-					</li>
-					<li>
-						<a href="{{ path('contact') }}">Contact</a>
-					</li>
-					<li>
-						{% if app.user == null %}
-							<a href="{{ path('app_login') }}">Connexion</a>
-						{% endif %}
+					<a href="{{ path('home') }}"><img src="/uploads/Screenshot_2021-11-15_17.42.01-removebg-preview.png" width="50px">
+						<li>
+							<a href="{{ path('home') }}">Accueil</a>
+						</li>
+						<li>
+							<a href="{{ path('gallery') }} ">Gallerie</a>
+						</li>
+						<li>
+							<a href="{{ path('products') }}">Boutique</a>
+						</li>
+						<li>
+							<a href="{{ path('cours') }}">Cours</a>
+						</li>
+						<li>
+							<a href="{{ path('exposition') }}">Exposition</a>
+						</li>
+						<li>
+							<a href="{{ path('contact') }}">Contact</a>
+						</li>
+						<li>
+							{% if app.user == null %}
+								<a href="{{ path('app_login') }}">Connexion</a>
+							{% endif %}
 
-						{% if app.user != null %}
-							<a href="{{ path('app_login') }}">
-								{{ app.user.lastname ~' '~ app.user.firstname}}
-							</a>
-						{% endif %}
-					</li>
-					<li>
-						<a href="{{ path('register') }}">Inscription</a>
-					</li>
-					<li>
-					 <a href="{{ path('cart') }}"><img src="{{ asset('assets/img/shopping-cart.png') }}" width="30px"></a>
-					</li>
+							{% if app.user != null %}
+								<a href="{{ path('app_login') }}">
+									{{ app.user.lastname ~' '~ app.user.firstname}}
+								</a>
+							{% endif %}
+						</li>
+						<li>
+							<a href="{{ path('register') }}">Inscription</a>
+						</li>
+						<li>
+							<a href="{{ path('cart') }}"><img src="{{ asset('assets/img/shopping-cart.png') }}" width="30px"></a>
+						</li>
+					</div>
+				</ul>
+			</header>
+		{% endblock %}
+
+		{% block content %}{% endblock %}
+
+		<div class="container"></div>
+		<footer>
+			<!-- Footer main -->
+			<section class="ft-main">
+				<div class="ft-main-item">
+					<h2 class="ft-title">De plus :</h2>
+					<ul>
+						<li><a href="/">Accueil</a></li>
+						<li><a href="/gallerie">Galerie</a></li>
+						<li><a href="/boutique">Boutique</a></li>
+						<li><a href="/exposition">Exposition</a></li>
+
+					</ul>
 				</div>
-			</ul>
-		</header>
-	{% endblock %}
+				<div class="ft-main-item">
+					<h2 class="ft-title">Mon compte :</h2>
+					<ul>
+						<li>
+							{% if app.user == null %}
+								<a href="{{ path('app_login') }}">Connexion</a>
+							{% endif %}
+							{% if app.user != null %}
+								<a href="{{ path('app_login') }}">
+									{{ app.user.lastname ~' '~ app.user.firstname}}
+								</a>
+							{% endif %}
+						</li>
+						<li>
+							<a href="{{ path('register') }}">Inscription</a>
+						</li>
+					</ul>
+				</div>
+				<div class="ft-main-item">
+					<h2 class="ft-title">Contact :</h2>
+					<ul>
+						<li><a href="/cours">Cours</a></li>
 
-	{% block content %}{% endblock %}
+						<li><a href="/contact">Contact</a></li>
+					</ul>
+				</div>
+				<div class="ft-main-item">
+					<h2 class="ft-title">Restez à jour</h2>
+					<p>Inscrivez-vous à ma newsletter pour avoir les dernières oeuvres et informations.</p>
+					<form>
+						<input type="email" name="email" placeholder="Entrer votre adresse email">
+						<input type="submit" value="Souscrivez">
+					</form>
+				</div>
+			</section>
 
-	<div class="container"></div>
-	<footer>
-		<!-- Footer main -->
-		<section class="ft-main">
-			<div class="ft-main-item">
-				<h2 class="ft-title">De plus :</h2>
-				<ul>
-					<li><a href="/">Accueil</a></li>
-					<li><a href="/gallerie">Gallerie</a></li>
-					<li><a href="/boutique">Boutique</a></li>
-					<li><a href="/exposition">Exposition</a></li>
-
-				</ul>
-			</div>
-			<div class="ft-main-item">
-				<h2 class="ft-title">Mon compte :</h2>
-				<ul>
+			<!-- Footer social -->
+			<section class="ft-social">
+				<ul class="ft-social-list">
 					<li>
-						{% if app.user == null %}
-							<a href="{{ path('app_login') }}">Connexion</a>
-						{% endif %}
-						{% if app.user != null %}
-							<a href="{{ path('app_login') }}">
-								{{ app.user.lastname ~' '~ app.user.firstname}}
-							</a>
-						{% endif %}
+						<a href="https://www.facebook.com/antonin.fournet">
+							<i class="fab fa-facebook"></i>
+						</a>
 					</li>
 					<li>
-						<a href="{{ path('register') }}">Inscription</a>
+						<a href="#">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/chupa1810/">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/Lolo8021/Projet">
+							<i class="fab fa-github"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fab fa-linkedin"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fab fa-youtube"></i>
+						</a>
 					</li>
 				</ul>
-			</div>
-			<div class="ft-main-item">
-				<h2 class="ft-title">Contact :</h2>
-				<ul>
-					<li><a href="/cours">Cours</a></li>
+			</section>
 
-					<li><a href="/contact">Contact</a></li>
-				</ul>
-			</div>
-			<div class="ft-main-item">
-				<h2 class="ft-title">Restez à jour</h2>
-				<p>Inscrivez-vous à ma newsletter pour avoir les dernières oeuvres et informations.</p>
-				<form>
-					<input type="email" name="email" placeholder="Entrer votre adresse email">
-					<input type="submit" value="Souscrivez">
-				</form>
-			</div>
-		</section>
-
-		<!-- Footer social -->
-		<section class="ft-social">
-			<ul class="ft-social-list">
-				<li>
-					<a href="https://www.facebook.com/antonin.fournet">
-						<i class="fab fa-facebook"></i>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="fab fa-twitter"></i>
-					</a>
-				</li>
-				<li>
-					<a href="https://www.instagram.com/chupa1810/">
-						<i class="fab fa-instagram"></i>
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/Lolo8021/Projet">
-						<i class="fab fa-github"></i>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="fab fa-linkedin"></i>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="fab fa-youtube"></i>
-					</a>
-				</li>
-			</ul>
-		</section>
-
-		<!-- Footer legal -->
-		<section class="ft-legal">
-			<ul class="ft-legal-list">
-				<li>
-					<a href="#">Termes &amp; Conditions</a>
-				</li>
-				<li>
-					<a href="#">Privacy Policy</a>
-				</li>
-				<li>&copy; 2021 Copyright Lorenzo.G Yvann.K Thomas.A Baptiste.D Paul.G</li>
-</html></footer><script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script><script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script><script src="{{asset('assets/js/antonin.js')}}"></script><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script></html>
+			<!-- Footer legal -->
+			<section class="ft-legal">
+				<ul class="ft-legal-list">
+					<li>
+						<a href="#">Termes &amp; Conditions</a>
+					</li>
+					<li>
+						<a href="#">Privacy Policy</a>
+					</li>
+					<li>&copy; 2021 Copyright Lorenzo.G Yvann.K Thomas.A Baptiste.D Paul.G</li>
+				</html>
+			</footer>
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+			<script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script>
+			<script src="{{asset('assets/js/antonin.js')}}"></script>
+			<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		</html>
