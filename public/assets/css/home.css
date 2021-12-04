@@ -870,3 +870,18 @@ html {
 .clearfix {
 	display: block;
 }
+
+
+.textLytb{
+	text-align: justify;
+	border-spacing: 40px 10px;
+	border-collapse: separate;
+	padding-left: -50%;
+}
+
+.textLytb2{
+	text-align: justify;
+	margin-right: 50px;
+	padding-right: 50px;
+	border-spacing: 60px -10px;
+}

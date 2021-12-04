@@ -8,22 +8,31 @@
 
 		<link href="{{asset('assets/css/contact.css')}}" rel="stylesheet">
 		<link rel="stylesheet" href="{{asset('assets/css/contact.css')}}">
-    <h2>Nous contacter</h2>
-    <p>N'hésitez pas à prendre contact avec notre équipe, nous vous répondrons dans les meilleurs délais.</p>
-    {% for message in app.flashes('notice') %}
-        <div class="alert alert-info">{{ message }}</div>
-    {% endfor %}
-    <div class="row">
-        <div class="col-md-8">{{form(form)}}</div>
-        <div class="col-md-4">
-            <strong>Antonin Fournet</strong>
-            <hr>
-            06 20 30 40 50<br/>
-            3 Rue des Tanneurs, 37000 Tours, France.<br/>
-            antoninfournet@gmail.fr<br/>
-            <hr>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.799684468599!2d0.6802236156080942!3d47.39634117917133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd5bb1ca1ccb5%3A0x4f4260bef73d2661!2sUniversit%C3%A9%20de%20Tours!5e0!3m2!1sfr!2sfr!4v1638442712797!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+     <body>
+    <h1>
+
+	</h1>
+
+    <div class="login-box">
+        <h2>Nous contacter</h2>
+        <p>N'hésitez pas à prendre contact avec notre équipe, nous vous répondrons dans les meilleurs délais.</p>
+        {% for message in app.flashes('notice') %}
+            <div class="alert alert-info">{{ message }}</div>
+        {% endfor %}
+        <div class="row">
+            <div class="col-md-8">{{form(form)}}</div>
+            <div class="col-md-4">
+                <strong>Antonin Fournet</strong>
+                <img src="/uploads/128928802_3449789141741548_8434449610011243469_n.jpg" class="image-ronde">
+                <hr>
+                06 20 30 40 50<br/>
+                3 Rue des Tanneurs, 37000 Tours, France.<br/>
+                antoninfournet@gmail.fr<br/>
+                <hr>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.799684468599!2d0.6802236156080942!3d47.39634117917133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd5bb1ca1ccb5%3A0x4f4260bef73d2661!2sUniversit%C3%A9%20de%20Tours!5e0!3m2!1sfr!2sfr!4v1638442712797!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
     </div>
 
+    </body>
 {% endblock %}
