@@ -23,7 +23,7 @@ class OrderSuccessController extends AbstractController
      */
     public function index(Cart $cart, $stripeSessionId)
     {
-        $order = $this->entityManager->getRepository(Order::class)->findOneByStripeSessionId($stripeSessionId);
+        $order = $this->entityManager->getRepository(Order::class)->findOneBy(array('stripeSessionId' => $stripeSessionId));
 
         if (!$order || $order->getUser() != $this->getUser()) {
             return $this->redirectToRoute('home');

@@ -33,7 +33,8 @@ class AccountOrderController extends AbstractController
      */
     public function show($reference)
     {
-        $order = $this->entityManager->getRepository(Order::class)->findOneByReference($reference);
+        $order = $this->entityManager->getRepository(Order::class)->findOneBy(array('reference' => $reference));
+        
 
         if (!$order || $order->getUser() != $this->getUser()) {
             return $this->redirectToRoute('account_order');
