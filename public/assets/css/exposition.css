@@ -1,4 +1,12 @@
-
+html {
+	height: 180%;
+  }
+  body {
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+	background: linear-gradient(#ffffff, #16385f);
+  }
 
 .main {
   display: flex;
@@ -12,8 +20,49 @@
   height: 100%;
 }
 
+.login-show{
+	font-size: 12px;
+	margin-left: 14px;
+} 
 
 h1 {
-  padding-top: 20px;
-  padding-left: 20px;
+	margin-bottom: 85%;
+   }
+
+
+.login-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1100px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	background: rgba(0,0,0,.5);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.6);
+	border-radius: 10px;
+	color: #fff;
+  margin-top: 20%;
+  }
+
+  .login-box h2 {
+	margin: 0 0 30px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+  }
+
+  .login-box p {
+	margin: 0 0 30px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+  }
+
+.col-md-8{
+  width: 600px;
+}
+
+.col-md-4{
+
 }
