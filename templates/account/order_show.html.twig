@@ -3,6 +3,10 @@
 {% block title %}Ma commandes - La Boutique Française{% endblock %}
 
 {% block content %}
+<link href="{{asset('assets/css/panier.css')}}" rel="stylesheet">
+	<link rel="stylesheet" href="{{asset('assets/css/panier.css')}}">
+    
+
     <h1>Ma commande {{ order.reference }}</h1>
     <a href="{{ path('account_order') }}">Retour</a>
     <hr><strong></strong>
