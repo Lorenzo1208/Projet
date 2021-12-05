@@ -7,9 +7,12 @@ html {
   body {
 
 	font-family: sans-serif;
-	background:  linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+	
   }
 
+  header{
+	background:linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  }
 *{
 	margin: 5px;
 	padding: 0;
