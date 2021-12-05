@@ -1,15 +1,27 @@
 
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+html {
+	height: auto;
+  }
+  body {
+
+	font-family: sans-serif;
+	background: linear-gradient(#ffffff, #16385f);
+  }
 
 *{
-	margin: 0;
+	margin: 5px;
 	padding: 0;
 	
 }
 
 .img-gallery {
 	display: inline-flexbox;
+}
+
+footer{
+	margin: -5px;
 }
 
 /*

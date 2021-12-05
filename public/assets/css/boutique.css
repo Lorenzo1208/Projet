@@ -9,6 +9,10 @@
 	transition: opacity 1s ease-in-out;
   }
 
+  html {
+    height: auto;
+    }
+    
 
 .row {
 	margin: 15px;
@@ -17,6 +21,7 @@ body {
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(#ffffff, #16385f);
 }
 
 
