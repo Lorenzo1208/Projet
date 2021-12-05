@@ -6,24 +6,22 @@ html {
 	padding:0;
 	font-family: sans-serif;
 	background:linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  }
-
-form {
-	padding-right: 100px;
+  height: 1150px;
 }
+
 
 h1 {
  margin-bottom: 40%;
 }
 
 .form-group{
-	width: 350px;
+	width: 400px;
 }
 
 .login-show{
-	font-size: 12px;
+	font-size: 10px;
 	margin-left: 14px;
-	padding-left: 50%;
+	padding-left: 20%;
 	margin-top: -57px;
 	color: #fff;
 }
@@ -32,7 +30,8 @@ h1 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 450px;
+	bottom: 10px;
+	width: 500px;
 	padding: 40px;
 	transform: translate(-50%, -50%);
 	background: rgba(0,0,0,.5);
@@ -40,11 +39,17 @@ h1 {
 	box-shadow: 0 15px 25px rgba(0,0,0,.6);
 	border-radius: 10px;
 	color: #fff;
+	height: 700px;
   }
 
   .login-box h2 {
-	margin: 0 0 30px;
-	padding: 0;
+	
 	color: #fff;
 	text-align: center;
+  }
+
+  header { 
+
+	padding-bottom: 30px;
+	  
   }
