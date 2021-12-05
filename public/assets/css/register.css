@@ -1,6 +1,4 @@
-html {
-	height: 100%;
-  }
+
   body {
 	margin:0;
 	padding:0;
@@ -8,7 +6,7 @@ html {
 	background:linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
   height: 1150px;
 }
-
+footer {margin-top: 5%;}
 
 h1 {
  margin-bottom: 40%;
@@ -23,14 +21,14 @@ h1 {
 	margin-left: 14px;
 	padding-left: 20%;
 	margin-top: -57px;
-	color: #fff;
+	color: rgb(255, 255, 255);
 }
 
 .login-box {
-	position: absolute;
-	top: 50%;
+	position: relative;
+	top: 30%;
 	left: 50%;
-	bottom: 10px;
+	
 	width: 500px;
 	padding: 40px;
 	transform: translate(-50%, -50%);
