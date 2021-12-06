@@ -100,5 +100,9 @@
             "allow-contrib": false,
             "require": "5.3.*"
         }
+    },
+    "engines": {
+        "node": "v16.6.*",
+        "npm": "7.20.*"
     }
 }
