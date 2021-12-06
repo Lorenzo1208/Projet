@@ -32,7 +32,10 @@ h1 {
 	top: 30%;
 	left: 50%;
 	width: 1100px;
+	height : 1150px;
 	padding: 40px;
+	margin-top: 20%;
+
 	transform: translate(-50%, -50%);
 	background: rgba(0,0,0,.5);
 	box-sizing: border-box;
