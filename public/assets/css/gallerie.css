@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+*{
+	margin-left: 5px;
+}
+
 html {
 	height: auto;
   }
@@ -12,6 +16,7 @@ html {
 
   header{
 	background:linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+	margin: -5px;
   }
 
   a {
