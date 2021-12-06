@@ -21,6 +21,9 @@
 
 			<style>
 
+.dark {
+  filter: invert(1) hue-rotate(180deg)
+}
 
 				figure {
 
@@ -108,6 +111,8 @@
 
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.9.0/umd/react.production.min.js"></script>
 
+			
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.production.min.js"></script>
 			<script src="{{asset('assets/js/boutique.js')}}"></script>
 		{% endblock %}
+<script src="{{asset('assets/js/home.js')}}"></script>

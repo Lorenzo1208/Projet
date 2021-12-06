@@ -5,7 +5,12 @@ body {
   padding: 0;
   
 }
-
+.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+}
+.invert {
+  filter: invert(1) hue-rotate(180deg);
+}
 a {
   color: rgb(0, 0, 0);
   text-transform: uppercase;
