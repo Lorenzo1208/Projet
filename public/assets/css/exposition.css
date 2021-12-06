@@ -1,6 +1,4 @@
-html {
-	height: 180%;
-  }
+
   body {
 	margin:0;
 	padding:0;
@@ -16,8 +14,7 @@ html {
 
 .section {
   padding-left: 20px;
-  width: 50%;
-  height: 100%;
+  
 }
 
 .login-show{
@@ -26,13 +23,13 @@ html {
 } 
 
 h1 {
-	margin-bottom: 85%;
+	margin-bottom: 65%;
    }
 
 
 .login-box {
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	left: 50%;
 	width: 1100px;
 	padding: 40px;
@@ -60,7 +57,7 @@ h1 {
   }
 
 .col-md-8{
-  width: 600px;
+
 }
 
 .col-md-4{

@@ -13,11 +13,11 @@
         "doctrine/doctrine-migrations-bundle": "^3.1",
         "doctrine/orm": "^2.10",
         "easycorp/easyadmin-bundle": "^3.5",
-        "m-adamski/symfony-phone-number-bundle": "^2.0",
         "mailjet/mailjet-apiv3-php": "^1.5",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^6.1",
         "stripe/stripe-php": "^7.104",
+        "symfony/apache-pack": "^1.0",
         "symfony/asset": "5.3.*",
         "symfony/console": "5.3.*",
         "symfony/dotenv": "5.3.*",
@@ -101,4 +101,5 @@
             "require": "5.3.*"
         }
     }
+    
 }

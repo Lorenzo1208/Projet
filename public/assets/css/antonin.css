@@ -5,7 +5,12 @@ body {
   padding: 0;
   
 }
-
+.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+}
+.invert {
+  filter: invert(1) hue-rotate(180deg);
+}
 a {
   color: rgb(0, 0, 0);
   text-transform: uppercase;
@@ -127,7 +132,7 @@ body {
 
 /* Footer main | Newsletter form */
 form {
-  display: flex;
+  
   flex-wrap: wrap;
 }
 
