@@ -21,16 +21,16 @@
 	<hr>
 
 	<div class="contenu_compte">
-	<li>
+	
 	{% if is_granted('ROLE_ADMIN')%}
 		<a href="/admin">Vous êtes un administrateur</a>
 		{% endif %}
-		</li>
+		<hr>
 		<li>
 		<a href="{{ path('account_password') }}">Modifier mon mot de passe</a>
 		</li>
 		<li>
-				<img src="{{ asset('assets/img/address-book.png') }}" alt="Gérer mes adresses">
+				
                 <a href="{{ path('account_order') }}">Mes commandes</a>
           
 		</li>
