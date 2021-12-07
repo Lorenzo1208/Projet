@@ -8,5 +8,20 @@ p{
 }
 
 h3 {
-    padding-left: 20%;
+    padding-left: 7%;
+}
+
+span{
+    padding-left: 7%;
+}
+
+.img-fluid{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+a.btn btn-primary{
+    width : 200px;
 }
